@@ -136,6 +136,8 @@ type Terminal struct {
 	slab         *util.Slab
 	theme        *tui.ColorTheme
 	tui          tui.Renderer
+	onPrompt     bool
+	x            bool
 }
 
 type selectedItem struct {
@@ -477,7 +479,9 @@ func NewTerminal(opts *Options, eventBox *util.EventBox) *Terminal {
 		startChan:   make(chan bool, 1),
 		killChan:    make(chan int),
 		tui:         renderer,
-		initFunc:    func() { renderer.Init() }}
+		initFunc:    func() { renderer.Init() },
+		onPrompt:    true,
+		/*x: false*/}
 	t.prompt, t.promptLen = t.parsePrompt(opts.Prompt)
 	t.pointer, t.pointerLen = t.processTabs([]rune(opts.Pointer), 0)
 	t.marker, t.markerLen = t.processTabs([]rune(opts.Marker), 0)
@@ -493,6 +497,7 @@ func (t *Terminal) parsePrompt(prompt string) (func(), int) {
 	trimmed, colors, _ := extractColor(prompt, state, nil)
 	item := &Item{text: util.ToChars([]byte(trimmed)), colors: colors}
 	output := func() {
+		//if t.onPrompt {}
 		t.printHighlighted(
 			Result{item: item}, t.strong, tui.ColPrompt, tui.ColPrompt, false, false)
 	}
@@ -942,7 +947,7 @@ func (t *Terminal) printItem(result Result, line int, i int, current bool) {
 			current = i%2 == 0
 			label = t.jumpLabels[i:i+1] + strings.Repeat(" ", t.pointerLen-1)
 		}
-	} else if current {
+	} else if !t.onPrompt && current {
 		label = t.pointer
 	}
 
@@ -959,7 +964,7 @@ func (t *Terminal) printItem(result Result, line int, i int, current bool) {
 	}
 
 	t.move(line, 0, false)
-	if current {
+	if !t.onPrompt && current {
 		t.window.CPrint(tui.ColCurrentCursor, t.strong, label)
 		if selected {
 			t.window.CPrint(tui.ColCurrentSelected, t.strong, t.marker)
@@ -1240,6 +1245,7 @@ func (t *Terminal) refresh() {
 func (t *Terminal) delChar() bool {
 	if len(t.input) > 0 && t.cx < len(t.input) {
 		t.input = append(t.input[:t.cx], t.input[t.cx+1:]...)
+		t.x = true
 		return true
 	}
 	return false
@@ -1283,6 +1289,7 @@ func (t *Terminal) rubout(pattern string) {
 	t.cx = findLastMatch(pattern, string(t.input[:t.cx])) + 1
 	t.yanked = copySlice(t.input[t.cx:pcx])
 	t.input = append(t.input[:t.cx], after...)
+	t.x = true
 }
 
 func keyMatch(key int, event tui.Event) bool {
@@ -1804,11 +1811,13 @@ func (t *Terminal) Loop() {
 							focusedIndex = currentIndex
 							refreshPreview(t.preview.command)
 						}
+						// XXX t.printPrompt()
 					case reqJump:
 						if t.merger.Length() == 0 {
 							t.jumping = jumpDisabled
 						}
 						t.printList()
+						// XXX  t.printPrompt()
 					case reqHeader:
 						t.printHeader()
 					case reqRefresh:
@@ -1983,11 +1992,11 @@ func (t *Terminal) Loop() {
 				refreshPreview(a.a)
 			case actRefreshPreview:
 				refreshPreview(t.preview.command)
-			case actReplaceQuery:
-				if t.cy >= 0 && t.cy < t.merger.Length() {
-					t.input = t.merger.Get(t.cy).item.text.ToRunes()
-					t.cx = len(t.input)
-				}
+			//case actReplaceQuery:
+				//if t.cy >= 0 && t.cy < t.merger.Length() {
+					//t.input = t.merger.Get(t.cy).item.text.ToRunes()
+					//t.cx = len(t.input)
+				//}
 			case actAbort:
 				req(reqQuit)
 			case actDeleteChar:
@@ -2004,6 +2013,7 @@ func (t *Terminal) Loop() {
 				} else {
 					t.yanked = t.input
 					t.input = []rune{}
+					t.x = true
 					t.cx = 0
 				}
 			case actBackwardDeleteCharEOF:
@@ -2011,6 +2021,7 @@ func (t *Terminal) Loop() {
 					req(reqQuit)
 				} else if t.cx > 0 {
 					t.input = append(t.input[:t.cx-1], t.input[t.cx:]...)
+					t.x = true
 					t.cx--
 				}
 			case actForwardChar:
@@ -2021,6 +2032,7 @@ func (t *Terminal) Loop() {
 				beof = len(t.input) == 0
 				if t.cx > 0 {
 					t.input = append(t.input[:t.cx-1], t.input[t.cx:]...)
+					t.x = true
 					t.cx--
 				}
 			case actSelectAll:
@@ -2087,9 +2099,19 @@ func (t *Terminal) Loop() {
 			case actDown:
 				t.vmove(-1, true)
 				req(reqList)
+				if t.cy >= 0 && t.cy < t.merger.Length() {
+					t.input = t.merger.Get(t.cy).item.text.ToRunes()
+					t.x = false
+					t.cx = len(t.input)
+				}
 			case actUp:
 				t.vmove(1, true)
 				req(reqList)
+				if t.cy >= 0 && t.cy < t.merger.Length() {
+					t.input = t.merger.Get(t.cy).item.text.ToRunes()
+					t.x = false
+					t.cx = len(t.input)
+				}
 			case actAccept:
 				req(reqClose)
 			case actAcceptNonEmpty:
@@ -2100,6 +2122,7 @@ func (t *Terminal) Loop() {
 				req(reqRedraw)
 			case actClearQuery:
 				t.input = []rune{}
+				t.x = true
 				t.cx = 0
 			case actClearSelection:
 				if t.multi > 0 {
@@ -2115,6 +2138,7 @@ func (t *Terminal) Loop() {
 				if t.cx > 0 {
 					t.yanked = copySlice(t.input[:t.cx])
 					t.input = t.input[t.cx:]
+					t.x = true
 					t.cx = 0
 				}
 			case actUnixWordRubout:
@@ -2130,6 +2154,7 @@ func (t *Terminal) Loop() {
 			case actYank:
 				suffix := copySlice(t.input[t.cx:])
 				t.input = append(append(t.input[:t.cx], t.yanked...), suffix...)
+				t.x = true
 				t.cx += len(t.yanked)
 			case actPageUp:
 				t.vmove(t.maxItems()-1, false)
@@ -2159,26 +2184,31 @@ func (t *Terminal) Loop() {
 				if ncx > t.cx {
 					t.yanked = copySlice(t.input[t.cx:ncx])
 					t.input = append(t.input[:t.cx], t.input[ncx:]...)
+					t.x = true
 				}
 			case actKillLine:
 				if t.cx < len(t.input) {
 					t.yanked = copySlice(t.input[t.cx:])
 					t.input = t.input[:t.cx]
+					t.x = true
 				}
 			case actRune:
 				prefix := copySlice(t.input[:t.cx])
 				t.input = append(append(prefix, event.Char), t.input[t.cx:]...)
+				t.x = true
 				t.cx++
 			case actPreviousHistory:
 				if t.history != nil {
 					t.history.override(string(t.input))
 					t.input = trimQuery(t.history.previous())
+					t.x = true
 					t.cx = len(t.input)
 				}
 			case actNextHistory:
 				if t.history != nil {
 					t.history.override(string(t.input))
 					t.input = trimQuery(t.history.next())
+					t.x = true
 					t.cx = len(t.input)
 				}
 			case actSigStop:
@@ -2318,7 +2348,7 @@ func (t *Terminal) Loop() {
 
 		t.mutex.Unlock() // Must be unlocked before touching reqBox
 
-		if changed || newCommand != nil {
+		if t.x && (changed || newCommand != nil) {
 			t.eventBox.Set(EvtSearchNew, searchRequest{sort: t.sort, command: newCommand})
 		}
 		for _, event := range events {
@@ -2347,15 +2377,23 @@ func (t *Terminal) vmove(o int, allowCycle bool) {
 		o *= -1
 	}
 	dest := t.cy + o
+	if t.onPrompt && dest == 1 {
+		dest = 0
+		t.onPrompt = false
+	}
 	if t.cycle && allowCycle {
 		max := t.merger.Length() - 1
 		if dest > max {
 			if t.cy == max {
 				dest = 0
+				t.onPrompt = true
 			}
 		} else if dest < 0 {
 			if t.cy == 0 {
-				dest = max
+				if t.onPrompt {
+					dest = max
+				}
+				t.onPrompt = !t.onPrompt
 			}
 		}
 	}

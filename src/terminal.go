@@ -229,7 +229,6 @@ const (
 	actJumpAccept
 	actPrintQuery
 	actRefreshPreview
-	actReplaceQuery
 	actToggleSort
 	actTogglePreview
 	actTogglePreviewWrap
@@ -497,7 +496,7 @@ func (t *Terminal) parsePrompt(prompt string) (func(), int) {
 	trimmed, colors, _ := extractColor(prompt, state, nil)
 	item := &Item{text: util.ToChars([]byte(trimmed)), colors: colors}
 	output := func() {
-		//if t.onPrompt {}
+		// XXX if t.onPrompt {}
 		t.printHighlighted(
 			Result{item: item}, t.strong, tui.ColPrompt, tui.ColPrompt, false, false)
 	}
@@ -1992,11 +1991,6 @@ func (t *Terminal) Loop() {
 				refreshPreview(a.a)
 			case actRefreshPreview:
 				refreshPreview(t.preview.command)
-			//case actReplaceQuery:
-				//if t.cy >= 0 && t.cy < t.merger.Length() {
-					//t.input = t.merger.Get(t.cy).item.text.ToRunes()
-					//t.cx = len(t.input)
-				//}
 			case actAbort:
 				req(reqQuit)
 			case actDeleteChar:

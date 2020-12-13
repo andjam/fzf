@@ -190,8 +190,6 @@ const (
 	actMouse
 	actBeginningOfLine
 	actAbort
-	actAccept
-	actAcceptNonEmpty
 	actBackwardChar
 	actBackwardDeleteChar
 	actBackwardDeleteCharEOF
@@ -300,7 +298,7 @@ func defaultKeymap() map[int][]action {
 	keymap[tui.CtrlJ] = toActions(actDown)
 	keymap[tui.CtrlK] = toActions(actUp)
 	keymap[tui.CtrlL] = toActions(actClearScreen)
-	keymap[tui.CtrlM] = toActions(actAccept)
+	keymap[tui.CtrlM] = toActions(actPrintQuery)
 	keymap[tui.CtrlN] = toActions(actDown)
 	keymap[tui.CtrlP] = toActions(actUp)
 	keymap[tui.CtrlU] = toActions(actUnixLineDiscard)
@@ -333,7 +331,7 @@ func defaultKeymap() map[int][]action {
 
 	keymap[tui.Rune] = toActions(actRune)
 	keymap[tui.Mouse] = toActions(actMouse)
-	keymap[tui.DoubleClick] = toActions(actAccept)
+	keymap[tui.DoubleClick] = toActions(actPrintQuery)
 	keymap[tui.LeftClick] = toActions(actIgnore)
 	keymap[tui.RightClick] = toActions(actToggle)
 	return keymap
@@ -2105,12 +2103,6 @@ func (t *Terminal) Loop() {
 					t.input = t.merger.Get(t.cy).item.text.ToRunes()
 					t.x = false
 					t.cx = len(t.input)
-				}
-			case actAccept:
-				req(reqClose)
-			case actAcceptNonEmpty:
-				if len(t.selected) > 0 || t.merger.Length() > 0 || !t.reading && t.count == 0 {
-					req(reqClose)
 				}
 			case actClearScreen:
 				req(reqRedraw)

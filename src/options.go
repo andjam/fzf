@@ -762,12 +762,6 @@ func parseKeymap(keymap map[int][]action, str string) {
 				appendAction(actBeginningOfLine)
 			case "abort":
 				appendAction(actAbort)
-			case "accept":
-				appendAction(actAccept)
-			case "accept-non-empty":
-				appendAction(actAcceptNonEmpty)
-			case "print-query":
-				appendAction(actPrintQuery)
 			case "refresh-preview":
 				appendAction(actRefreshPreview)
 			case "backward-char":

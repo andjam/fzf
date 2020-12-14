@@ -136,7 +136,6 @@ type Terminal struct {
 	slab         *util.Slab
 	theme        *tui.ColorTheme
 	tui          tui.Renderer
-	onPrompt     bool
 	x            bool
 }
 
@@ -477,7 +476,6 @@ func NewTerminal(opts *Options, eventBox *util.EventBox) *Terminal {
 		killChan:    make(chan int),
 		tui:         renderer,
 		initFunc:    func() { renderer.Init() },
-		onPrompt:    true,
 		/*x: false*/}
 	t.prompt, t.promptLen = t.parsePrompt(opts.Prompt)
 	t.pointer, t.pointerLen = t.processTabs([]rune(opts.Pointer), 0)
@@ -494,7 +492,7 @@ func (t *Terminal) parsePrompt(prompt string) (func(), int) {
 	trimmed, colors, _ := extractColor(prompt, state, nil)
 	item := &Item{text: util.ToChars([]byte(trimmed)), colors: colors}
 	output := func() {
-		// XXX if t.onPrompt {}
+		// XXX if t.cy == 0 {}
 		t.printHighlighted(
 			Result{item: item}, t.strong, tui.ColPrompt, tui.ColPrompt, false, false)
 	}
@@ -944,7 +942,7 @@ func (t *Terminal) printItem(result Result, line int, i int, current bool) {
 			current = i%2 == 0
 			label = t.jumpLabels[i:i+1] + strings.Repeat(" ", t.pointerLen-1)
 		}
-	} else if !t.onPrompt && current {
+	} else if t.cy != -1 && current {
 		label = t.pointer
 	}
 
@@ -961,7 +959,7 @@ func (t *Terminal) printItem(result Result, line int, i int, current bool) {
 	}
 
 	t.move(line, 0, false)
-	if !t.onPrompt && current {
+	if t.cy != -1 && current {
 		t.window.CPrint(tui.ColCurrentCursor, t.strong, label)
 		if selected {
 			t.window.CPrint(tui.ColCurrentSelected, t.strong, t.marker)
@@ -2348,12 +2346,12 @@ func (t *Terminal) constrain() {
 	height := t.maxItems()
 	diffpos := t.cy - t.offset
 
-	t.cy = util.Constrain(t.cy, 0, count-1)
+	t.cy = util.Constrain(t.cy, -1, count-1)
 	t.offset = util.Constrain(t.offset, t.cy-height+1, t.cy)
 	// Adjustment
 	if count-t.offset < height {
 		t.offset = util.Max(0, count-height)
-		t.cy = util.Constrain(t.offset+diffpos, 0, count-1)
+		t.cy = util.Constrain(t.offset+diffpos, -1, count-1)
 	}
 	t.offset = util.Max(0, t.offset)
 }
@@ -2363,36 +2361,15 @@ func (t *Terminal) vmove(o int, allowCycle bool) {
 		o *= -1
 	}
 	dest := t.cy + o
-	ox := t.onPrompt
-	if dest > 0 {
-		if t.cy == 0 {
-			if t.onPrompt {
-				dest = 0
-				t.onPrompt = false
-			}
-		}
-	}
-	if dest < 0 {
-		if t.cy == 0 {
-			if !t.onPrompt {
-				dest = 0
-				t.onPrompt = true
-			}
-		}
-	}
 	if t.cycle && allowCycle {
 		max := t.merger.Length() - 1
 		if dest > max {
 			if t.cy == max {
-				dest = 0
-				t.onPrompt = true
+				dest = -1
 			}
-		} else if dest < 0 {
-			if t.cy == 0 {
-				if ox {
-					dest = max
-				}
-				t.onPrompt = !ox
+		} else if dest < -1 {
+			if t.cy == -1 {
+				dest = max
 			}
 		}
 	}
@@ -2400,7 +2377,7 @@ func (t *Terminal) vmove(o int, allowCycle bool) {
 }
 
 func (t *Terminal) vset(o int) bool {
-	t.cy = util.Constrain(o, 0, t.merger.Length()-1)
+	t.cy = util.Constrain(o, -1, t.merger.Length()-1)
 	return t.cy == o
 }
 

@@ -2363,9 +2363,22 @@ func (t *Terminal) vmove(o int, allowCycle bool) {
 		o *= -1
 	}
 	dest := t.cy + o
-	if t.onPrompt && dest == 1 {
-		dest = 0
-		t.onPrompt = false
+	ox := t.onPrompt
+	if dest > 0 {
+		if t.cy == 0 {
+			if t.onPrompt {
+				dest = 0
+				t.onPrompt = false
+			}
+		}
+	}
+	if dest < 0 {
+		if t.cy == 0 {
+			if !t.onPrompt {
+				dest = 0
+				t.onPrompt = true
+			}
+		}
 	}
 	if t.cycle && allowCycle {
 		max := t.merger.Length() - 1
@@ -2376,10 +2389,10 @@ func (t *Terminal) vmove(o int, allowCycle bool) {
 			}
 		} else if dest < 0 {
 			if t.cy == 0 {
-				if t.onPrompt {
+				if ox {
 					dest = max
 				}
-				t.onPrompt = !t.onPrompt
+				t.onPrompt = !ox
 			}
 		}
 	}

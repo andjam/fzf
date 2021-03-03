@@ -1,0 +1,1327 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Add	src/cache.go	/^func (cc *ChunkCache) Add(chunk *Chunk, key string, list []Result) {$/;"	f
+Algo	src/algo/algo.go	/^type Algo func(caseSensitive bool, normalize bool, forward bool, input *util.Chars, pattern []rune, withPos bool, slab *util.Slab) (Result, *[]int)$/;"	t
+Alt0	src/tui/tui.go	/^	Alt0$/;"	c
+AltA	src/tui/tui.go	/^	AltA = Alt0 + 'a' - '0' + iota$/;"	c
+AltB	src/tui/tui.go	/^	AltB$/;"	c
+AltBS	src/tui/tui.go	/^	AltBS$/;"	c
+AltC	src/tui/tui.go	/^	AltC$/;"	c
+AltD	src/tui/tui.go	/^	AltD$/;"	c
+AltDown	src/tui/tui.go	/^	AltDown$/;"	c
+AltE	src/tui/tui.go	/^	AltE$/;"	c
+AltF	src/tui/tui.go	/^	AltF$/;"	c
+AltLeft	src/tui/tui.go	/^	AltLeft$/;"	c
+AltRight	src/tui/tui.go	/^	AltRight$/;"	c
+AltSlash	src/tui/tui.go	/^	AltSlash$/;"	c
+AltSpace	src/tui/tui.go	/^	AltSpace$/;"	c
+AltUp	src/tui/tui.go	/^	AltUp$/;"	c
+AltZ	src/tui/tui.go	/^	AltZ     = AltA + 'z' - 'a'$/;"	c
+AsString	src/item.go	/^func (item *Item) AsString(stripAnsi bool) string {$/;"	f
+AsString	src/pattern.go	/^func (p *Pattern) AsString() string {$/;"	f
+AsUint16	src/util/util.go	/^func AsUint16(val int) uint16 {$/;"	f
+AtomicBool	src/util/atomicbool.go	/^type AtomicBool struct {$/;"	t
+Attr	src/tui/dummy.go	/^type Attr int$/;"	t
+Attr	src/tui/tcell.go	/^type Attr tcell.Style$/;"	t
+AttrRegular	src/tui/dummy.go	/^	AttrRegular Attr = Attr(0)$/;"	c
+AttrRegular	src/tui/tcell.go	/^	AttrRegular Attr = 0$/;"	c
+BINARY	Makefile	/^	BINARY := $(BINARY64)$/;"	m
+BINARY	Makefile	/^	BINARY := $(BINARYARM5)$/;"	m
+BINARY	Makefile	/^	BINARY := $(BINARYARM6)$/;"	m
+BINARY	Makefile	/^	BINARY := $(BINARYARM7)$/;"	m
+BINARY	Makefile	/^	BINARY := $(BINARYARM8)$/;"	m
+BINARY	Makefile	/^	BINARY := $(BINARYPPC64LE)$/;"	m
+BINARY64	Makefile	/^BINARY64       := fzf-$(GOOS)_amd64$/;"	m
+BINARYARM5	Makefile	/^BINARYARM5     := fzf-$(GOOS)_arm5$/;"	m
+BINARYARM6	Makefile	/^BINARYARM6     := fzf-$(GOOS)_arm6$/;"	m
+BINARYARM7	Makefile	/^BINARYARM7     := fzf-$(GOOS)_arm7$/;"	m
+BINARYARM8	Makefile	/^BINARYARM8     := fzf-$(GOOS)_arm8$/;"	m
+BINARYPPC64LE	Makefile	/^BINARYPPC64LE  := fzf-$(GOOS)_ppc64le$/;"	m
+BSpace	src/tui/tui.go	/^	BSpace$/;"	c
+BTab	src/tui/tui.go	/^	BTab$/;"	c
+BUILD_FLAGS	Makefile	/^BUILD_FLAGS    := -a -ldflags "-X main.revision=$(REVISION) -w '-extldflags=$(LDFLAGS)'" -tags "$(TAGS)"$/;"	m
+BackwardEOF	src/tui/tui.go	/^	BackwardEOF$/;"	c
+Bg	src/tui/tui.go	/^func (p ColorPair) Bg() Color {$/;"	f
+Blink	src/tui/dummy.go	/^	Blink            = Attr(1 << 4)$/;"	c
+Blink	src/tui/tcell.go	/^	Blink          = Attr(tcell.AttrBlink)$/;"	c
+Blink2	src/tui/dummy.go	/^	Blink2           = Attr(1 << 5)$/;"	c
+Bold	src/tui/dummy.go	/^	Bold             = Attr(1)$/;"	c
+Bold	src/tui/tcell.go	/^	Bold      Attr = Attr(tcell.AttrBold)$/;"	c
+BorderCharacter	src/tui/tui.go	/^type BorderCharacter int$/;"	t
+BorderHorizontal	src/tui/tui.go	/^	BorderHorizontal$/;"	c
+BorderNone	src/tui/tui.go	/^	BorderNone BorderShape = iota$/;"	c
+BorderRounded	src/tui/tui.go	/^	BorderRounded$/;"	c
+BorderShape	src/tui/tui.go	/^type BorderShape int$/;"	t
+BorderSharp	src/tui/tui.go	/^	BorderSharp$/;"	c
+BorderStyle	src/tui/tui.go	/^type BorderStyle struct {$/;"	t
+BuildPattern	src/pattern.go	/^func BuildPattern(fuzzy bool, fuzzyAlgo algo.Algo, extended bool, caseMode Case, normalize bool, forward bool,$/;"	f
+ByOrder	src/result.go	/^type ByOrder []Offset$/;"	t
+ByRelevance	src/result.go	/^type ByRelevance []Result$/;"	t
+ByRelevanceTac	src/result.go	/^type ByRelevanceTac []Result$/;"	t
+Bytes	src/util/chars.go	/^func (chars *Chars) Bytes() []byte {$/;"	f
+CFill	src/tui/light.go	/^func (w *LightWindow) CFill(fg Color, bg Color, attr Attr, text string) FillReturn {$/;"	f
+CFill	src/tui/tcell.go	/^func (w *TcellWindow) CFill(fg Color, bg Color, a Attr, str string) FillReturn {$/;"	f
+CPrint	src/tui/light.go	/^func (w *LightWindow) CPrint(pair ColorPair, attr Attr, text string) {$/;"	f
+CPrint	src/tui/tcell.go	/^func (w *TcellWindow) CPrint(pair ColorPair, attr Attr, text string) {$/;"	f
+CacheKey	src/pattern.go	/^func (p *Pattern) CacheKey() string {$/;"	f
+Case	src/options.go	/^type Case int$/;"	t
+CaseIgnore	src/options.go	/^	CaseIgnore$/;"	c
+CaseRespect	src/options.go	/^	CaseRespect$/;"	c
+CaseSmart	src/options.go	/^	CaseSmart Case = iota$/;"	c
+Change	src/tui/tui.go	/^	Change$/;"	c
+Chars	src/util/chars.go	/^type Chars struct {$/;"	t
+Chunk	src/chunklist.go	/^type Chunk struct {$/;"	t
+ChunkCache	src/cache.go	/^type ChunkCache struct {$/;"	t
+ChunkList	src/chunklist.go	/^type ChunkList struct {$/;"	t
+Clear	src/chunklist.go	/^func (cl *ChunkList) Clear() {$/;"	f
+Clear	src/tui/dummy.go	/^func (r *FullscreenRenderer) Clear()            {}$/;"	f
+Clear	src/tui/light.go	/^func (r *LightRenderer) Clear() {$/;"	f
+Clear	src/tui/tcell.go	/^func (r *FullscreenRenderer) Clear() {$/;"	f
+Clear	src/util/eventbox.go	/^func (events *Events) Clear() {$/;"	f
+Close	src/tui/dummy.go	/^func (r *FullscreenRenderer) Close()            {}$/;"	f
+Close	src/tui/light.go	/^func (r *LightRenderer) Close() {$/;"	f
+Close	src/tui/light.go	/^func (w *LightWindow) Close() {$/;"	f
+Close	src/tui/tcell.go	/^func (r *FullscreenRenderer) Close() {$/;"	f
+Close	src/tui/tcell.go	/^func (w *TcellWindow) Close() {$/;"	f
+ColBorder	src/tui/tui.go	/^	ColBorder          ColorPair$/;"	v
+ColCurrent	src/tui/tui.go	/^	ColCurrent         ColorPair$/;"	v
+ColCurrentCursor	src/tui/tui.go	/^	ColCurrentCursor   ColorPair$/;"	v
+ColCurrentMatch	src/tui/tui.go	/^	ColCurrentMatch    ColorPair$/;"	v
+ColCurrentSelected	src/tui/tui.go	/^	ColCurrentSelected ColorPair$/;"	v
+ColCursor	src/tui/tui.go	/^	ColCursor          ColorPair$/;"	v
+ColHeader	src/tui/tui.go	/^	ColHeader          ColorPair$/;"	v
+ColInfo	src/tui/tui.go	/^	ColInfo            ColorPair$/;"	v
+ColMatch	src/tui/tui.go	/^	ColMatch           ColorPair$/;"	v
+ColNormal	src/tui/tui.go	/^	ColNormal          ColorPair$/;"	v
+ColPreview	src/tui/tui.go	/^	ColPreview         ColorPair$/;"	v
+ColPreviewBorder	src/tui/tui.go	/^	ColPreviewBorder   ColorPair$/;"	v
+ColPrompt	src/tui/tui.go	/^	ColPrompt          ColorPair$/;"	v
+ColSelected	src/tui/tui.go	/^	ColSelected        ColorPair$/;"	v
+ColSpinner	src/tui/tui.go	/^	ColSpinner         ColorPair$/;"	v
+Color	src/tui/tui.go	/^type Color int32$/;"	t
+ColorPair	src/tui/tui.go	/^type ColorPair struct {$/;"	t
+ColorTheme	src/tui/tui.go	/^type ColorTheme struct {$/;"	t
+Colors	src/item.go	/^func (item *Item) Colors() []ansiOffset {$/;"	f
+CompletionTest	test/test_go.rb	/^module CompletionTest$/;"	m
+Constrain	src/util/util.go	/^func Constrain(val int, min int, max int) int {$/;"	f
+Constrain32	src/util/util.go	/^func Constrain32(val int32, min int32, max int32) int32 {$/;"	f
+CopyRunes	src/util/chars.go	/^func (chars *Chars) CopyRunes(dest []rune) {$/;"	f
+CountItems	src/chunklist.go	/^func CountItems(cs []*Chunk) int {$/;"	f
+CtrlA	src/tui/tui.go	/^	CtrlA$/;"	c
+CtrlAltA	src/tui/tui.go	/^	CtrlAltA = AltZ + 1$/;"	c
+CtrlAltM	src/tui/tui.go	/^	CtrlAltM = CtrlAltA + 'm' - 'a'$/;"	c
+CtrlB	src/tui/tui.go	/^	CtrlB$/;"	c
+CtrlBackSlash	src/tui/tui.go	/^	CtrlBackSlash$/;"	c
+CtrlC	src/tui/tui.go	/^	CtrlC$/;"	c
+CtrlCaret	src/tui/tui.go	/^	CtrlCaret$/;"	c
+CtrlD	src/tui/tui.go	/^	CtrlD$/;"	c
+CtrlE	src/tui/tui.go	/^	CtrlE$/;"	c
+CtrlF	src/tui/tui.go	/^	CtrlF$/;"	c
+CtrlG	src/tui/tui.go	/^	CtrlG$/;"	c
+CtrlH	src/tui/tui.go	/^	CtrlH$/;"	c
+CtrlJ	src/tui/tui.go	/^	CtrlJ$/;"	c
+CtrlK	src/tui/tui.go	/^	CtrlK$/;"	c
+CtrlL	src/tui/tui.go	/^	CtrlL$/;"	c
+CtrlM	src/tui/tui.go	/^	CtrlM$/;"	c
+CtrlN	src/tui/tui.go	/^	CtrlN$/;"	c
+CtrlO	src/tui/tui.go	/^	CtrlO$/;"	c
+CtrlP	src/tui/tui.go	/^	CtrlP$/;"	c
+CtrlQ	src/tui/tui.go	/^	CtrlQ$/;"	c
+CtrlR	src/tui/tui.go	/^	CtrlR$/;"	c
+CtrlRightBracket	src/tui/tui.go	/^	CtrlRightBracket$/;"	c
+CtrlS	src/tui/tui.go	/^	CtrlS$/;"	c
+CtrlSlash	src/tui/tui.go	/^	CtrlSlash$/;"	c
+CtrlSpace	src/tui/tui.go	/^	CtrlSpace$/;"	c
+CtrlT	src/tui/tui.go	/^	CtrlT$/;"	c
+CtrlU	src/tui/tui.go	/^	CtrlU$/;"	c
+CtrlV	src/tui/tui.go	/^	CtrlV$/;"	c
+CtrlW	src/tui/tui.go	/^	CtrlW$/;"	c
+CtrlX	src/tui/tui.go	/^	CtrlX$/;"	c
+CtrlY	src/tui/tui.go	/^	CtrlY$/;"	c
+CtrlZ	src/tui/tui.go	/^	CtrlZ$/;"	c
+DEBUG	src/algo/algo.go	/^var DEBUG bool$/;"	v
+Dark256	src/tui/tui.go	/^	Dark256   *ColorTheme$/;"	v
+Default16	src/tui/tui.go	/^	Default16 *ColorTheme$/;"	v
+Del	src/tui/tui.go	/^	Del$/;"	c
+Delimiter	src/tokenizer.go	/^type Delimiter struct {$/;"	t
+Dim	src/tui/dummy.go	/^	Dim              = Attr(1 << 1)$/;"	c
+Dim	src/tui/tcell.go	/^	Dim            = Attr(tcell.AttrDim)$/;"	c
+DoesAutoWrap	src/tui/dummy.go	/^func (r *FullscreenRenderer) DoesAutoWrap() bool { return false }$/;"	f
+DoesAutoWrap	src/tui/light.go	/^func (r *LightRenderer) DoesAutoWrap() bool {$/;"	f
+DoesAutoWrap	src/tui/tcell.go	/^func (r *FullscreenRenderer) DoesAutoWrap() bool {$/;"	f
+DoubleClick	src/tui/tui.go	/^	DoubleClick$/;"	c
+Down	src/tui/tui.go	/^	Down$/;"	c
+DurWithin	src/util/util.go	/^func DurWithin($/;"	f
+ESC	src/tui/tui.go	/^	ESC$/;"	c
+EmptyMerger	src/merger.go	/^var EmptyMerger = NewMerger(nil, [][]Result{}, false, false)$/;"	v
+EmptyTheme	src/tui/tui.go	/^func EmptyTheme() *ColorTheme {$/;"	f
+Enclose	src/tui/light.go	/^func (w *LightWindow) Enclose(y int, x int) bool {$/;"	f
+Enclose	src/tui/tcell.go	/^func (w *TcellWindow) Enclose(y int, x int) bool {$/;"	f
+End	src/tui/tui.go	/^	End$/;"	c
+EqualMatch	src/algo/algo.go	/^func EqualMatch(caseSensitive bool, normalize bool, forward bool, text *util.Chars, pattern []rune, withPos bool, slab *util.Slab) (Result, *[]int) {$/;"	f
+Erase	src/tui/light.go	/^func (w *LightWindow) Erase() {$/;"	f
+Erase	src/tui/tcell.go	/^func (w *TcellWindow) Erase() {$/;"	f
+Event	src/tui/tui.go	/^type Event struct {$/;"	t
+EventBox	src/util/eventbox.go	/^type EventBox struct {$/;"	t
+EventType	src/util/eventbox.go	/^type EventType int$/;"	t
+Events	src/util/eventbox.go	/^type Events map[EventType]interface{}$/;"	t
+EvtClose	src/util/eventbox_test.go	/^	EvtClose$/;"	c
+EvtHeader	src/constants.go	/^	EvtHeader$/;"	c
+EvtReadFin	src/constants.go	/^	EvtReadFin$/;"	c
+EvtReadFin	src/util/eventbox_test.go	/^	EvtReadFin$/;"	c
+EvtReadNew	src/constants.go	/^	EvtReadNew util.EventType = iota$/;"	c
+EvtReadNew	src/util/eventbox_test.go	/^	EvtReadNew EventType = iota$/;"	c
+EvtReady	src/constants.go	/^	EvtReady$/;"	c
+EvtSearchFin	src/constants.go	/^	EvtSearchFin$/;"	c
+EvtSearchFin	src/util/eventbox_test.go	/^	EvtSearchFin$/;"	c
+EvtSearchNew	src/constants.go	/^	EvtSearchNew$/;"	c
+EvtSearchNew	src/util/eventbox_test.go	/^	EvtSearchNew$/;"	c
+EvtSearchProgress	src/constants.go	/^	EvtSearchProgress$/;"	c
+EvtSearchProgress	src/util/eventbox_test.go	/^	EvtSearchProgress$/;"	c
+ExactMatchNaive	src/algo/algo.go	/^func ExactMatchNaive(caseSensitive bool, normalize bool, forward bool, text *util.Chars, pattern []rune, withPos bool, slab *util.Slab) (Result, *[]int) {$/;"	f
+ExecCommand	src/util/util_unix.go	/^func ExecCommand(command string, setpgid bool) *exec.Cmd {$/;"	f
+ExecCommand	src/util/util_windows.go	/^func ExecCommand(command string, setpgid bool) *exec.Cmd {$/;"	f
+ExecCommandWith	src/util/util_unix.go	/^func ExecCommandWith(shell string, command string, setpgid bool) *exec.Cmd {$/;"	f
+ExecCommandWith	src/util/util_windows.go	/^func ExecCommandWith(_shell string, command string, setpgid bool) *exec.Cmd {$/;"	f
+F1	src/tui/tui.go	/^	F1$/;"	c
+F10	src/tui/tui.go	/^	F10$/;"	c
+F11	src/tui/tui.go	/^	F11$/;"	c
+F12	src/tui/tui.go	/^	F12$/;"	c
+F2	src/tui/tui.go	/^	F2$/;"	c
+F3	src/tui/tui.go	/^	F3$/;"	c
+F4	src/tui/tui.go	/^	F4$/;"	c
+F5	src/tui/tui.go	/^	F5$/;"	c
+F6	src/tui/tui.go	/^	F6$/;"	c
+F7	src/tui/tui.go	/^	F7$/;"	c
+F8	src/tui/tui.go	/^	F8$/;"	c
+F9	src/tui/tui.go	/^	F9$/;"	c
+FZF	plugin/fzf.vim	/^command! -nargs=* -complete=dir -bang FZF call s:cmd(<bang>0, <f-args>)$/;"	c
+Fg	src/tui/tui.go	/^func (p ColorPair) Fg() Color {$/;"	f
+Fill	src/tui/light.go	/^func (w *LightWindow) Fill(text string) FillReturn {$/;"	f
+Fill	src/tui/tcell.go	/^func (w *TcellWindow) Fill(str string) FillReturn {$/;"	f
+FillContinue	src/tui/tui.go	/^	FillContinue FillReturn = iota$/;"	c
+FillNextLine	src/tui/tui.go	/^	FillNextLine$/;"	c
+FillReturn	src/tui/tui.go	/^type FillReturn int$/;"	t
+FillSuspend	src/tui/tui.go	/^	FillSuspend$/;"	c
+FinishFill	src/tui/light.go	/^func (w *LightWindow) FinishFill() {$/;"	f
+FinishFill	src/tui/tcell.go	/^func (w *TcellWindow) FinishFill() {$/;"	f
+FullscreenRenderer	src/tui/tui.go	/^type FullscreenRenderer struct {$/;"	t
+FuzzyMatchV1	src/algo/algo.go	/^func FuzzyMatchV1(caseSensitive bool, normalize bool, forward bool, text *util.Chars, pattern []rune, withPos bool, slab *util.Slab) (Result, *[]int) {$/;"	f
+FuzzyMatchV2	src/algo/algo.go	/^func FuzzyMatchV2(caseSensitive bool, normalize bool, forward bool, input *util.Chars, pattern []rune, withPos bool, slab *util.Slab) (Result, *[]int) {$/;"	f
+GO	Makefile	/^GO             ?= go$/;"	m
+GOOS	Makefile	/^	GOOS=darwin  make release$/;"	m
+GOOS	Makefile	/^	GOOS=freebsd make release$/;"	m
+GOOS	Makefile	/^	GOOS=linux   make release$/;"	m
+GOOS	Makefile	/^	GOOS=openbsd make release$/;"	m
+GOOS	Makefile	/^	GOOS=windows make release$/;"	m
+GOOS	Makefile	/^GOOS           ?= $(word 1, $(subst \/, " ", $(word 4, $(shell go version))))$/;"	m
+Get	src/merger.go	/^func (mg *Merger) Get(idx int) Result {$/;"	f
+Get	src/util/atomicbool.go	/^func (a *AtomicBool) Get() bool {$/;"	f
+Get	src/util/chars.go	/^func (chars *Chars) Get(i int) rune {$/;"	f
+GetChar	src/tui/dummy.go	/^func (r *FullscreenRenderer) GetChar() Event     { return Event{} }$/;"	f
+GetChar	src/tui/light.go	/^func (r *LightRenderer) GetChar() Event {$/;"	f
+GetChar	src/tui/tcell.go	/^func (r *FullscreenRenderer) GetChar() Event {$/;"	f
+HasFullscreenRenderer	src/tui/dummy.go	/^func HasFullscreenRenderer() bool {$/;"	f
+HasFullscreenRenderer	src/tui/tcell.go	/^func HasFullscreenRenderer() bool {$/;"	f
+Height	src/tui/light.go	/^func (w *LightWindow) Height() int {$/;"	f
+Height	src/tui/tcell.go	/^func (w *TcellWindow) Height() int {$/;"	f
+HexToColor	src/tui/tui.go	/^func HexToColor(rrggbb string) Color {$/;"	f
+History	src/history.go	/^type History struct {$/;"	t
+Home	src/tui/tui.go	/^	Home$/;"	c
+Index	src/item.go	/^func (item *Item) Index() int32 {$/;"	f
+Index	src/result.go	/^func (result *Result) Index() int32 {$/;"	f
+Init	src/tui/dummy.go	/^func (r *FullscreenRenderer) Init()             {}$/;"	f
+Init	src/tui/light.go	/^func (r *LightRenderer) Init() {$/;"	f
+Init	src/tui/tcell.go	/^func (r *FullscreenRenderer) Init() {$/;"	f
+Input	src/terminal.go	/^func (t *Terminal) Input() []rune {$/;"	f
+Insert	src/tui/tui.go	/^	Insert$/;"	c
+Invalid	src/tui/tui.go	/^	Invalid$/;"	c
+IsBytes	src/util/chars.go	/^func (chars *Chars) IsBytes() bool {$/;"	f
+IsEmpty	src/pattern.go	/^func (p *Pattern) IsEmpty() bool {$/;"	f
+IsFull	src/chunklist.go	/^func (c *Chunk) IsFull() bool {$/;"	f
+IsLightRendererSupported	src/tui/light_unix.go	/^func IsLightRendererSupported() bool {$/;"	f
+IsLightRendererSupported	src/tui/light_windows.go	/^func IsLightRendererSupported() bool {$/;"	f
+IsTty	src/util/util.go	/^func IsTty() bool {$/;"	f
+IsWindows	src/util/util_unix.go	/^func IsWindows() bool {$/;"	f
+IsWindows	src/util/util_windows.go	/^func IsWindows() bool {$/;"	f
+Italic	src/tui/dummy.go	/^	Italic           = Attr(1 << 2)$/;"	c
+Italic	src/tui/tcell.go	/^	Italic         = Attr(tcell.AttrNone) \/\/ Not supported$/;"	c
+Item	src/item.go	/^type Item struct {$/;"	t
+ItemBuilder	src/chunklist.go	/^type ItemBuilder func(*Item, []byte) bool$/;"	t
+KillCommand	src/util/util_unix.go	/^func KillCommand(cmd *exec.Cmd) error {$/;"	f
+KillCommand	src/util/util_windows.go	/^func KillCommand(cmd *exec.Cmd) error {$/;"	f
+LeadingWhitespaces	src/util/chars.go	/^func (chars *Chars) LeadingWhitespaces() int {$/;"	f
+Left	src/tui/light.go	/^func (w *LightWindow) Left() int {$/;"	f
+Left	src/tui/tcell.go	/^func (w *TcellWindow) Left() int {$/;"	f
+Left	src/tui/tui.go	/^	Left$/;"	c
+LeftClick	src/tui/tui.go	/^	LeftClick$/;"	c
+Len	src/result.go	/^func (a ByOrder) Len() int {$/;"	f
+Len	src/result.go	/^func (a ByRelevance) Len() int {$/;"	f
+Len	src/result.go	/^func (a ByRelevanceTac) Len() int {$/;"	f
+Len	src/terminal.go	/^func (a byTimeOrder) Len() int {$/;"	f
+Length	src/merger.go	/^func (mg *Merger) Length() int {$/;"	f
+Length	src/util/chars.go	/^func (chars *Chars) Length() int {$/;"	f
+Less	src/result.go	/^func (a ByOrder) Less(i, j int) bool {$/;"	f
+Less	src/result.go	/^func (a ByRelevance) Less(i, j int) bool {$/;"	f
+Less	src/result.go	/^func (a ByRelevanceTac) Less(i, j int) bool {$/;"	f
+Less	src/terminal.go	/^func (a byTimeOrder) Less(i, j int) bool {$/;"	f
+Light256	src/tui/tui.go	/^	Light256  *ColorTheme$/;"	v
+LightRenderer	src/tui/light.go	/^type LightRenderer struct {$/;"	t
+LightWindow	src/tui/light.go	/^type LightWindow struct {$/;"	t
+Lookup	src/cache.go	/^func (cc *ChunkCache) Lookup(chunk *Chunk, key string) []Result {$/;"	f
+Loop	src/matcher.go	/^func (m *Matcher) Loop() {$/;"	f
+Loop	src/terminal.go	/^func (t *Terminal) Loop() {$/;"	f
+MAKEFILE	Makefile	/^MAKEFILE       := $(realpath $(lastword $(MAKEFILE_LIST)))$/;"	m
+MakeBorderStyle	src/tui/tui.go	/^func MakeBorderStyle(shape BorderShape, unicode bool) BorderStyle {$/;"	f
+MakeSlab	src/util/slab.go	/^func MakeSlab(size16 int, size32 int) *Slab {$/;"	f
+MakeTransparentBorder	src/tui/tui.go	/^func MakeTransparentBorder() BorderStyle {$/;"	f
+Match	src/pattern.go	/^func (p *Pattern) Match(chunk *Chunk, slab *util.Slab) []Result {$/;"	f
+MatchItem	src/pattern.go	/^func (p *Pattern) MatchItem(item *Item, withPos bool, slab *util.Slab) (*Result, []Offset, *[]int) {$/;"	f
+MatchRequest	src/matcher.go	/^type MatchRequest struct {$/;"	t
+Matcher	src/matcher.go	/^type Matcher struct {$/;"	t
+Max	src/util/util.go	/^func Max(first int, second int) int {$/;"	f
+Max16	src/util/util.go	/^func Max16(first int16, second int16) int16 {$/;"	f
+Max32	src/util/util.go	/^func Max32(first int32, second int32) int32 {$/;"	f
+MaxX	src/tui/dummy.go	/^func (r *FullscreenRenderer) MaxX() int          { return 0 }$/;"	f
+MaxX	src/tui/light.go	/^func (r *LightRenderer) MaxX() int {$/;"	f
+MaxX	src/tui/tcell.go	/^func (r *FullscreenRenderer) MaxX() int {$/;"	f
+MaxY	src/tui/dummy.go	/^func (r *FullscreenRenderer) MaxY() int          { return 0 }$/;"	f
+MaxY	src/tui/light.go	/^func (r *LightRenderer) MaxY() int {$/;"	f
+MaxY	src/tui/tcell.go	/^func (r *FullscreenRenderer) MaxY() int {$/;"	f
+Merge	src/tui/dummy.go	/^func (a Attr) Merge(b Attr) Attr {$/;"	f
+Merge	src/tui/tcell.go	/^func (a Attr) Merge(b Attr) Attr {$/;"	f
+Merger	src/merger.go	/^type Merger struct {$/;"	t
+Min	src/util/util.go	/^func Min(first int, second int) int {$/;"	f
+Min32	src/util/util.go	/^func Min32(first int32, second int32) int32 {$/;"	f
+Mouse	src/tui/tui.go	/^	Mouse$/;"	c
+MouseEvent	src/tui/tui.go	/^type MouseEvent struct {$/;"	t
+Move	src/tui/light.go	/^func (w *LightWindow) Move(y int, x int) {$/;"	f
+Move	src/tui/tcell.go	/^func (w *TcellWindow) Move(y int, x int) {$/;"	f
+MoveAndClear	src/tui/light.go	/^func (w *LightWindow) MoveAndClear(y int, x int) {$/;"	f
+MoveAndClear	src/tui/tcell.go	/^func (w *TcellWindow) MoveAndClear(y int, x int) {$/;"	f
+NewAtomicBool	src/util/atomicbool.go	/^func NewAtomicBool(initialState bool) *AtomicBool {$/;"	f
+NewChunkCache	src/cache.go	/^func NewChunkCache() ChunkCache {$/;"	f
+NewChunkList	src/chunklist.go	/^func NewChunkList(trans ItemBuilder) *ChunkList {$/;"	f
+NewColorPair	src/tui/tui.go	/^func NewColorPair(fg Color, bg Color) ColorPair {$/;"	f
+NewEventBox	src/util/eventbox.go	/^func NewEventBox() *EventBox {$/;"	f
+NewFullscreenRenderer	src/tui/tui.go	/^func NewFullscreenRenderer(theme *ColorTheme, forceBlack bool, mouse bool) Renderer {$/;"	f
+NewHistory	src/history.go	/^func NewHistory(path string, maxSize int) (*History, error) {$/;"	f
+NewLightRenderer	src/tui/light.go	/^func NewLightRenderer(theme *ColorTheme, forceBlack bool, mouse bool, tabstop int, clearOnExit bool, fullscreen bool, maxHeightFunc func(int) int) Renderer {$/;"	f
+NewMatcher	src/matcher.go	/^func NewMatcher(patternBuilder func([]rune) *Pattern,$/;"	f
+NewMerger	src/merger.go	/^func NewMerger(pattern *Pattern, lists [][]Result, sorted bool, tac bool) *Merger {$/;"	f
+NewReader	src/reader.go	/^func NewReader(pusher func([]byte) bool, eventBox *util.EventBox, delimNil bool, wait bool) *Reader {$/;"	f
+NewTerminal	src/terminal.go	/^func NewTerminal(opts *Options, eventBox *util.EventBox) *Terminal {$/;"	f
+NewWindow	src/tui/dummy.go	/^func (r *FullscreenRenderer) NewWindow(top int, left int, width int, height int, preview bool, borderStyle BorderStyle) Window {$/;"	f
+NewWindow	src/tui/light.go	/^func (r *LightRenderer) NewWindow(top int, left int, width int, height int, preview bool, borderStyle BorderStyle) Window {$/;"	f
+NewWindow	src/tui/tcell.go	/^func (r *FullscreenRenderer) NewWindow(top int, left int, width int, height int, preview bool, borderStyle BorderStyle) Window {$/;"	f
+NormalizeRunes	src/algo/normalize.go	/^func NormalizeRunes(runes []rune) []rune {$/;"	f
+Offset	src/result.go	/^type Offset [2]int32$/;"	t
+Once	src/util/util.go	/^func Once(nextResponse bool) func() bool {$/;"	f
+Options	src/options.go	/^type Options struct {$/;"	t
+ParseOptions	src/options.go	/^func ParseOptions() *Options {$/;"	f
+ParseRange	src/tokenizer.go	/^func ParseRange(str *string) (Range, bool) {$/;"	f
+PassMerger	src/merger.go	/^func PassMerger(chunks *[]*Chunk, tac bool) *Merger {$/;"	f
+Pattern	src/pattern.go	/^type Pattern struct {$/;"	t
+Pause	src/tui/dummy.go	/^func (r *FullscreenRenderer) Pause(bool)        {}$/;"	f
+Pause	src/tui/light.go	/^func (r *LightRenderer) Pause(clear bool) {$/;"	f
+Pause	src/tui/tcell.go	/^func (r *FullscreenRenderer) Pause(clear bool) {$/;"	f
+Peek	src/util/eventbox.go	/^func (b *EventBox) Peek(event EventType) bool {$/;"	f
+PgDn	src/tui/tui.go	/^	PgDn$/;"	c
+PgUp	src/tui/tui.go	/^	PgUp$/;"	c
+PrefixMatch	src/algo/algo.go	/^func PrefixMatch(caseSensitive bool, normalize bool, forward bool, text *util.Chars, pattern []rune, withPos bool, slab *util.Slab) (Result, *[]int) {$/;"	f
+Prepend	src/util/chars.go	/^func (chars *Chars) Prepend(prefix string) {$/;"	f
+Print	src/tui/light.go	/^func (w *LightWindow) Print(text string) {$/;"	f
+Print	src/tui/tcell.go	/^func (w *TcellWindow) Print(text string) {$/;"	f
+Protect	src/protector/protector.go	/^func Protect() {$/;"	f
+Protect	src/protector/protector_openbsd.go	/^func Protect() {$/;"	f
+Push	src/chunklist.go	/^func (cl *ChunkList) Push(data []byte) bool {$/;"	f
+RELEASE64	Makefile	/^RELEASE64      := fzf-$(VERSION)-$(GOOS)_amd64$/;"	m
+RELEASEARM5	Makefile	/^RELEASEARM5    := fzf-$(VERSION)-$(GOOS)_arm5$/;"	m
+RELEASEARM6	Makefile	/^RELEASEARM6    := fzf-$(VERSION)-$(GOOS)_arm6$/;"	m
+RELEASEARM7	Makefile	/^RELEASEARM7    := fzf-$(VERSION)-$(GOOS)_arm7$/;"	m
+RELEASEARM8	Makefile	/^RELEASEARM8    := fzf-$(VERSION)-$(GOOS)_arm8$/;"	m
+RELEASEPPC64LE	Makefile	/^RELEASEPPC64LE := fzf-$(VERSION)-$(GOOS)_ppc64le$/;"	m
+REVISION	Makefile	/^REVISION       := $(shell git log -n 1 --pretty=format:%h -- $(SOURCES))$/;"	m
+ROOT_DIR	Makefile	/^ROOT_DIR       := $(shell dirname $(MAKEFILE))$/;"	m
+Range	src/tokenizer.go	/^type Range struct {$/;"	t
+Read	src/util/util_unix.go	/^func Read(fd int, b []byte) (int, error) {$/;"	f
+Read	src/util/util_windows.go	/^func Read(fd int, b []byte) (int, error) {$/;"	f
+ReadSource	src/reader.go	/^func (r *Reader) ReadSource() {$/;"	f
+Reader	src/reader.go	/^type Reader struct {$/;"	t
+Refresh	src/tui/dummy.go	/^func (r *FullscreenRenderer) Refresh()          {}$/;"	f
+Refresh	src/tui/light.go	/^func (r *LightRenderer) Refresh() {$/;"	f
+Refresh	src/tui/light.go	/^func (w *LightWindow) Refresh() {$/;"	f
+Refresh	src/tui/tcell.go	/^func (r *FullscreenRenderer) Refresh() {$/;"	f
+Refresh	src/tui/tcell.go	/^func (w *TcellWindow) Refresh() {$/;"	f
+RefreshWindows	src/tui/dummy.go	/^func (r *FullscreenRenderer) RefreshWindows(windows []Window) {}$/;"	f
+RefreshWindows	src/tui/light.go	/^func (r *LightRenderer) RefreshWindows(windows []Window) {$/;"	f
+RefreshWindows	src/tui/tcell.go	/^func (r *FullscreenRenderer) RefreshWindows(windows []Window) {$/;"	f
+Renderer	src/tui/tui.go	/^type Renderer interface {$/;"	t
+Reset	src/matcher.go	/^func (m *Matcher) Reset(chunks []*Chunk, patternRunes []rune, cancel bool, final bool, sort bool, clearCache bool) {$/;"	f
+Resize	src/tui/tui.go	/^	Resize$/;"	c
+Result	src/algo/algo.go	/^type Result struct {$/;"	t
+Result	src/result.go	/^type Result struct {$/;"	t
+Resume	src/tui/dummy.go	/^func (r *FullscreenRenderer) Resume(bool, bool) {}$/;"	f
+Resume	src/tui/light.go	/^func (r *LightRenderer) Resume(clear bool, sigcont bool) {$/;"	f
+Resume	src/tui/tcell.go	/^func (r *FullscreenRenderer) Resume(clear bool, sigcont bool) {$/;"	f
+Reverse	src/tui/dummy.go	/^	Reverse          = Attr(1 << 6)$/;"	c
+Reverse	src/tui/tcell.go	/^	Reverse        = Attr(tcell.AttrReverse)$/;"	c
+Right	src/tui/tui.go	/^	Right$/;"	c
+RightClick	src/tui/tui.go	/^	RightClick$/;"	c
+Run	src/core.go	/^func Run(opts *Options, revision string) {$/;"	f
+Rune	src/tui/tui.go	/^	Rune = iota$/;"	c
+RuneWidth	src/util/util.go	/^func RuneWidth(r rune, prefixWidth int, tabstop int) int {$/;"	f
+RunesToChars	src/util/chars.go	/^func RunesToChars(runes []rune) Chars {$/;"	f
+SDown	src/tui/tui.go	/^	SDown$/;"	c
+SLeft	src/tui/tui.go	/^	SLeft$/;"	c
+SOURCES	Makefile	/^SOURCES        := $(wildcard *.go src\/*.go src\/*\/*.go) $(MAKEFILE)$/;"	m
+SRight	src/tui/tui.go	/^	SRight$/;"	c
+SUp	src/tui/tui.go	/^	SUp$/;"	c
+Search	src/cache.go	/^func (cc *ChunkCache) Search(chunk *Chunk, key string) []Result {$/;"	f
+Set	src/util/atomicbool.go	/^func (a *AtomicBool) Set(newState bool) bool {$/;"	f
+Set	src/util/eventbox.go	/^func (b *EventBox) Set(event EventType, value interface{}) {$/;"	f
+SetNonblock	src/util/util_unix.go	/^func SetNonblock(file *os.File, nonblock bool) {$/;"	f
+SetNonblock	src/util/util_windows.go	/^func SetNonblock(file *os.File, nonblock bool) {$/;"	f
+Shell	test/test_go.rb	/^class Shell$/;"	c
+Slab	src/util/slab.go	/^type Slab struct {$/;"	t
+Snapshot	src/chunklist.go	/^func (cl *ChunkList) Snapshot() ([]*Chunk, int) {$/;"	f
+String	src/pattern.go	/^func (t term) String() string {$/;"	f
+String	src/tokenizer.go	/^func (d Delimiter) String() string {$/;"	f
+String	src/tokenizer.go	/^func (t Token) String() string {$/;"	f
+String	src/util/chars.go	/^func (chars *Chars) String() string {$/;"	f
+Style	src/tui/tcell.go	/^func (c Color) Style() tcell.Color {$/;"	f
+SuffixMatch	src/algo/algo.go	/^func SuffixMatch(caseSensitive bool, normalize bool, forward bool, text *util.Chars, pattern []rune, withPos bool, slab *util.Slab) (Result, *[]int) {$/;"	f
+Swap	src/result.go	/^func (a ByOrder) Swap(i, j int) {$/;"	f
+Swap	src/result.go	/^func (a ByRelevance) Swap(i, j int) {$/;"	f
+Swap	src/result.go	/^func (a ByRelevanceTac) Swap(i, j int) {$/;"	f
+Swap	src/terminal.go	/^func (a byTimeOrder) Swap(i, j int) {$/;"	f
+Tab	src/tui/tui.go	/^	Tab$/;"	c
+TcellWindow	src/tui/tcell.go	/^type TcellWindow struct {$/;"	t
+Terminal	src/terminal.go	/^type Terminal struct {$/;"	t
+TestAdditiveExpect	src/options_test.go	/^func TestAdditiveExpect(t *testing.T) {$/;"	f
+TestAnsiCodeStringConversion	src/ansi_test.go	/^func TestAnsiCodeStringConversion(t *testing.T) {$/;"	f
+TestAtomicBool	src/util/atomicbool_test.go	/^func TestAtomicBool(t *testing.T) {$/;"	f
+TestBase	test/test_go.rb	/^class TestBase < Minitest::Test$/;"	c
+TestBash	test/test_go.rb	/^class TestBash < TestBase$/;"	c
+TestBind	src/options_test.go	/^func TestBind(t *testing.T) {$/;"	f
+TestCacheKey	src/pattern_test.go	/^func TestCacheKey(t *testing.T) {$/;"	f
+TestCacheable	src/pattern_test.go	/^func TestCacheable(t *testing.T) {$/;"	f
+TestCaseSensitivity	src/pattern_test.go	/^func TestCaseSensitivity(t *testing.T) {$/;"	f
+TestCharsLength	src/util/chars_test.go	/^func TestCharsLength(t *testing.T) {$/;"	f
+TestCharsToString	src/util/chars_test.go	/^func TestCharsToString(t *testing.T) {$/;"	f
+TestChunkCache	src/cache_test.go	/^func TestChunkCache(t *testing.T) {$/;"	f
+TestChunkList	src/chunklist_test.go	/^func TestChunkList(t *testing.T) {$/;"	f
+TestColorOffset	src/result_test.go	/^func TestColorOffset(t *testing.T) {$/;"	f
+TestColorSpec	src/options_test.go	/^func TestColorSpec(t *testing.T) {$/;"	f
+TestContrain	src/util/util_test.go	/^func TestContrain(t *testing.T) {$/;"	f
+TestDefaultCtrlNP	src/options_test.go	/^func TestDefaultCtrlNP(t *testing.T) {$/;"	f
+TestDelimiterRegex	src/options_test.go	/^func TestDelimiterRegex(t *testing.T) {$/;"	f
+TestDelimiterRegexRegex	src/options_test.go	/^func TestDelimiterRegexRegex(t *testing.T) {$/;"	f
+TestDelimiterRegexString	src/options_test.go	/^func TestDelimiterRegexString(t *testing.T) {$/;"	f
+TestEmptyMerger	src/merger_test.go	/^func TestEmptyMerger(t *testing.T) {$/;"	f
+TestEmptyPattern	src/algo/algo_test.go	/^func TestEmptyPattern(t *testing.T) {$/;"	f
+TestEqual	src/pattern_test.go	/^func TestEqual(t *testing.T) {$/;"	f
+TestEventBox	src/util/eventbox_test.go	/^func TestEventBox(t *testing.T) {$/;"	f
+TestExact	src/pattern_test.go	/^func TestExact(t *testing.T) {$/;"	f
+TestExactMatchNaive	src/algo/algo_test.go	/^func TestExactMatchNaive(t *testing.T) {$/;"	f
+TestExactMatchNaiveBackward	src/algo/algo_test.go	/^func TestExactMatchNaiveBackward(t *testing.T) {$/;"	f
+TestExtractColor	src/ansi_test.go	/^func TestExtractColor(t *testing.T) {$/;"	f
+TestFish	test/test_go.rb	/^class TestFish < TestBase$/;"	c
+TestFuzzyMatch	src/algo/algo_test.go	/^func TestFuzzyMatch(t *testing.T) {$/;"	f
+TestFuzzyMatchBackward	src/algo/algo_test.go	/^func TestFuzzyMatchBackward(t *testing.T) {$/;"	f
+TestGoFZF	test/test_go.rb	/^class TestGoFZF < TestBase$/;"	c	class:TestBase
+TestHexToColor	src/tui/tui_test.go	/^func TestHexToColor(t *testing.T) {$/;"	f
+TestHistory	src/history_test.go	/^func TestHistory(t *testing.T) {$/;"	f
+TestIrrelevantNth	src/options_test.go	/^func TestIrrelevantNth(t *testing.T) {$/;"	f
+TestLongString	src/algo/algo_test.go	/^func TestLongString(t *testing.T) {$/;"	f
+TestMax	src/util/util_test.go	/^func TestMax(t *testing.T) {$/;"	f
+TestMergerSorted	src/merger_test.go	/^func TestMergerSorted(t *testing.T) {$/;"	f
+TestMergerUnsorted	src/merger_test.go	/^func TestMergerUnsorted(t *testing.T) {$/;"	f
+TestNormalize	src/algo/algo_test.go	/^func TestNormalize(t *testing.T) {$/;"	f
+TestOffsetSort	src/result_test.go	/^func TestOffsetSort(t *testing.T) {$/;"	f
+TestOnce	src/util/util_test.go	/^func TestOnce(t *testing.T) {$/;"	f
+TestOrigTextAndTransformed	src/pattern_test.go	/^func TestOrigTextAndTransformed(t *testing.T) {$/;"	f
+TestParseKeys	src/options_test.go	/^func TestParseKeys(t *testing.T) {$/;"	f
+TestParseKeysWithComma	src/options_test.go	/^func TestParseKeysWithComma(t *testing.T) {$/;"	f
+TestParseNilTheme	src/options_test.go	/^func TestParseNilTheme(t *testing.T) {$/;"	f
+TestParseRange	src/tokenizer_test.go	/^func TestParseRange(t *testing.T) {$/;"	f
+TestParseTermsEmpty	src/pattern_test.go	/^func TestParseTermsEmpty(t *testing.T) {$/;"	f
+TestParseTermsExtended	src/pattern_test.go	/^func TestParseTermsExtended(t *testing.T) {$/;"	f
+TestParseTermsExtendedExact	src/pattern_test.go	/^func TestParseTermsExtendedExact(t *testing.T) {$/;"	f
+TestPrefixMatch	src/algo/algo_test.go	/^func TestPrefixMatch(t *testing.T) {$/;"	f
+TestPreviewOpts	src/options_test.go	/^func TestPreviewOpts(t *testing.T) {$/;"	f
+TestQuoteEntryCmd	src/terminal_test.go	/^func TestQuoteEntryCmd(t *testing.T) {$/;"	f
+TestRankComparison	src/result_test.go	/^func TestRankComparison(t *testing.T) {$/;"	f
+TestReadFromCommand	src/reader_test.go	/^func TestReadFromCommand(t *testing.T) {$/;"	f
+TestReplacePlaceholder	src/terminal_test.go	/^func TestReplacePlaceholder(t *testing.T) {$/;"	f
+TestResultRank	src/result_test.go	/^func TestResultRank(t *testing.T) {$/;"	f
+TestShell	test/test_go.rb	/^module TestShell$/;"	m	class:TestBase
+TestSplitNth	src/options_test.go	/^func TestSplitNth(t *testing.T) {$/;"	f
+TestStringPtr	src/item_test.go	/^func TestStringPtr(t *testing.T) {$/;"	f
+TestSuffixMatch	src/algo/algo_test.go	/^func TestSuffixMatch(t *testing.T) {$/;"	f
+TestToCharsAscii	src/util/chars_test.go	/^func TestToCharsAscii(t *testing.T) {$/;"	f
+TestToggle	src/options_test.go	/^func TestToggle(t *testing.T) {$/;"	f
+TestTokenize	src/tokenizer_test.go	/^func TestTokenize(t *testing.T) {$/;"	f
+TestTransform	src/tokenizer_test.go	/^func TestTransform(t *testing.T) {$/;"	f
+TestTransformIndexOutOfBounds	src/tokenizer_test.go	/^func TestTransformIndexOutOfBounds(t *testing.T) {$/;"	f
+TestTrimLength	src/util/chars_test.go	/^func TestTrimLength(t *testing.T) {$/;"	f
+TestValidateSign	src/options_test.go	/^func TestValidateSign(t *testing.T) {$/;"	f
+TestZsh	test/test_go.rb	/^class TestZsh < TestBase$/;"	c
+Tmux	test/test_go.rb	/^class Tmux$/;"	c
+ToChars	src/util/chars.go	/^func ToChars(bytes []byte) Chars {$/;"	f
+ToRunes	src/util/chars.go	/^func (chars *Chars) ToRunes() []rune {$/;"	f
+ToString	src/ansi.go	/^func (s *ansiState) ToString() string {$/;"	f
+ToString	src/util/chars.go	/^func (chars *Chars) ToString() string {$/;"	f
+Token	src/tokenizer.go	/^type Token struct {$/;"	t
+Tokenize	src/tokenizer.go	/^func Tokenize(text string, delimiter Delimiter) []Token {$/;"	f
+Top	src/tui/light.go	/^func (w *LightWindow) Top() int {$/;"	f
+Top	src/tui/tcell.go	/^func (w *TcellWindow) Top() int {$/;"	f
+TrailingWhitespaces	src/util/chars.go	/^func (chars *Chars) TrailingWhitespaces() int {$/;"	f
+Transform	src/tokenizer.go	/^func Transform(tokens []Token, withNth []Range) []Token {$/;"	f
+TrimLength	src/item.go	/^func (item *Item) TrimLength() uint16 {$/;"	f
+TrimLength	src/util/chars.go	/^func (chars *Chars) TrimLength() uint16 {$/;"	f
+TrimTrailingWhitespaces	src/util/chars.go	/^func (chars *Chars) TrimTrailingWhitespaces() {$/;"	f
+UNAME_M	Makefile	/^UNAME_M := $(shell uname -m)$/;"	m
+Underline	src/tui/dummy.go	/^	Underline        = Attr(1 << 3)$/;"	c
+Underline	src/tui/tcell.go	/^	Underline      = Attr(tcell.AttrUnderline)$/;"	c
+Unwatch	src/util/eventbox.go	/^func (b *EventBox) Unwatch(events ...EventType) {$/;"	f
+Up	src/tui/tui.go	/^	Up$/;"	c
+UpdateCount	src/terminal.go	/^func (t *Terminal) UpdateCount(cnt int, final bool, failedCommand *string) {$/;"	f
+UpdateHeader	src/terminal.go	/^func (t *Terminal) UpdateHeader(header []string) {$/;"	f
+UpdateList	src/terminal.go	/^func (t *Terminal) UpdateList(merger *Merger, reset bool) {$/;"	f
+UpdateProgress	src/terminal.go	/^func (t *Terminal) UpdateProgress(progress float32) {$/;"	f
+VERSION	Makefile	/^VERSION        := $(shell awk -F= '\/version =\/ {print $$2}' src\/constants.go | tr -d "\\" ")$/;"	m
+Wait	src/util/eventbox.go	/^func (b *EventBox) Wait(callback func(*Events)) {$/;"	f
+WaitFor	src/util/eventbox.go	/^func (b *EventBox) WaitFor(event EventType) {$/;"	f
+Watch	src/util/eventbox.go	/^func (b *EventBox) Watch(events ...EventType) {$/;"	f
+Width	src/tui/light.go	/^func (w *LightWindow) Width() int {$/;"	f
+Width	src/tui/tcell.go	/^func (w *TcellWindow) Width() int {$/;"	f
+Window	src/tui/tui.go	/^type Window interface {$/;"	t
+X	src/tui/light.go	/^func (w *LightWindow) X() int {$/;"	f
+X	src/tui/tcell.go	/^func (w *TcellWindow) X() int {$/;"	f
+Y	src/tui/light.go	/^func (w *LightWindow) Y() int {$/;"	f
+Y	src/tui/tcell.go	/^func (w *TcellWindow) Y() int {$/;"	f
+__fsel	shell/key-bindings.zsh	/^__fsel() {$/;"	f
+__fzf_cd__	shell/key-bindings.bash	/^__fzf_cd__() {$/;"	f
+__fzf_comprun	shell/completion.bash	/^__fzf_comprun() {$/;"	f
+__fzf_comprun	shell/completion.zsh	/^__fzf_comprun() {$/;"	f
+__fzf_defc	shell/completion.bash	/^__fzf_defc() {$/;"	f
+__fzf_extract_command	shell/completion.zsh	/^__fzf_extract_command() {$/;"	f
+__fzf_generic_path_completion	shell/completion.bash	/^__fzf_generic_path_completion() {$/;"	f
+__fzf_generic_path_completion	shell/completion.zsh	/^__fzf_generic_path_completion() {$/;"	f
+__fzf_history__	shell/key-bindings.bash	/^__fzf_history__() {$/;"	f
+__fzf_orig_completion_filter	shell/completion.bash	/^__fzf_orig_completion_filter() {$/;"	f
+__fzf_select__	shell/key-bindings.bash	/^__fzf_select__() {$/;"	f
+__fzfcmd	shell/key-bindings.bash	/^__fzfcmd() {$/;"	f
+__fzfcmd	shell/key-bindings.zsh	/^__fzfcmd() {$/;"	f
+_cache	src/pattern.go	/^	_cache        ChunkCache$/;"	v
+_colorToAttribute	src/tui/tcell.go	/^	_colorToAttribute = []tcell.Color{$/;"	v
+_fzf_alias_completion	shell/completion.bash	/^_fzf_alias_completion() {$/;"	f
+_fzf_compgen_dir	shell/completion.bash	/^  _fzf_compgen_dir() {$/;"	f
+_fzf_compgen_dir	shell/completion.zsh	/^  _fzf_compgen_dir() {$/;"	f
+_fzf_compgen_path	shell/completion.bash	/^  _fzf_compgen_path() {$/;"	f
+_fzf_compgen_path	shell/completion.zsh	/^  _fzf_compgen_path() {$/;"	f
+_fzf_complete	shell/completion.bash	/^_fzf_complete() {$/;"	f
+_fzf_complete	shell/completion.zsh	/^_fzf_complete() {$/;"	f
+_fzf_complete_export	shell/completion.zsh	/^_fzf_complete_export() {$/;"	f
+_fzf_complete_kill	shell/completion.bash	/^_fzf_complete_kill() {$/;"	f
+_fzf_complete_kill	shell/completion.zsh	/^_fzf_complete_kill() {$/;"	f
+_fzf_complete_kill_post	shell/completion.zsh	/^_fzf_complete_kill_post() {$/;"	f
+_fzf_complete_ssh	shell/completion.zsh	/^_fzf_complete_ssh() {$/;"	f
+_fzf_complete_telnet	shell/completion.zsh	/^_fzf_complete_telnet() {$/;"	f
+_fzf_complete_unalias	shell/completion.zsh	/^_fzf_complete_unalias() {$/;"	f
+_fzf_complete_unset	shell/completion.zsh	/^_fzf_complete_unset() {$/;"	f
+_fzf_dir_completion	shell/completion.bash	/^_fzf_dir_completion() {$/;"	f
+_fzf_dir_completion	shell/completion.zsh	/^_fzf_dir_completion() {$/;"	f
+_fzf_feed_fifo	shell/completion.zsh	/^_fzf_feed_fifo() ($/;"	f
+_fzf_file_completion	shell/completion.bash	/^_fzf_file_completion() {$/;"	f
+_fzf_handle_dynamic_completion	shell/completion.bash	/^_fzf_handle_dynamic_completion() {$/;"	f
+_fzf_host_completion	shell/completion.bash	/^_fzf_host_completion() {$/;"	f
+_fzf_opts_completion	shell/completion.bash	/^_fzf_opts_completion() {$/;"	f
+_fzf_path_completion	shell/completion.bash	/^_fzf_path_completion() {$/;"	f
+_fzf_path_completion	shell/completion.zsh	/^_fzf_path_completion() {$/;"	f
+_fzf_proc_completion	shell/completion.bash	/^_fzf_proc_completion() {$/;"	f
+_fzf_proc_completion_post	shell/completion.bash	/^_fzf_proc_completion_post() {$/;"	f
+_fzf_setup_completion	shell/completion.bash	/^_fzf_setup_completion() {$/;"	f
+_fzf_var_completion	shell/completion.bash	/^_fzf_var_completion() {$/;"	f
+_patternCache	src/pattern.go	/^	_patternCache map[string]*Pattern$/;"	v
+_runeWidths	src/util/util.go	/^var _runeWidths = make(map[rune]int)$/;"	v
+_screen	src/tui/tcell.go	/^	_screen tcell.Screen$/;"	v
+_splitRegex	src/pattern.go	/^	_splitRegex   *regexp.Regexp$/;"	v
+a:temps	plugin/fzf.vim	/^    let a:temps.shellscript = shellscript$/;"	v
+actAbort	src/terminal.go	/^	actAbort$/;"	c
+actAccept	src/terminal.go	/^	actAccept$/;"	c
+actAcceptNonEmpty	src/terminal.go	/^	actAcceptNonEmpty$/;"	c
+actBackwardChar	src/terminal.go	/^	actBackwardChar$/;"	c
+actBackwardDeleteChar	src/terminal.go	/^	actBackwardDeleteChar$/;"	c
+actBackwardDeleteCharEOF	src/terminal.go	/^	actBackwardDeleteCharEOF$/;"	c
+actBackwardKillWord	src/terminal.go	/^	actBackwardKillWord$/;"	c
+actBackwardWord	src/terminal.go	/^	actBackwardWord$/;"	c
+actBeginningOfLine	src/terminal.go	/^	actBeginningOfLine$/;"	c
+actCancel	src/terminal.go	/^	actCancel$/;"	c
+actClearQuery	src/terminal.go	/^	actClearQuery$/;"	c
+actClearScreen	src/terminal.go	/^	actClearScreen$/;"	c
+actClearSelection	src/terminal.go	/^	actClearSelection$/;"	c
+actDeleteChar	src/terminal.go	/^	actDeleteChar$/;"	c
+actDeleteCharEOF	src/terminal.go	/^	actDeleteCharEOF$/;"	c
+actDeselectAll	src/terminal.go	/^	actDeselectAll$/;"	c
+actDown	src/terminal.go	/^	actDown$/;"	c
+actEndOfLine	src/terminal.go	/^	actEndOfLine$/;"	c
+actExecute	src/terminal.go	/^	actExecute$/;"	c
+actExecuteMulti	src/terminal.go	/^	actExecuteMulti \/\/ Deprecated$/;"	c
+actExecuteSilent	src/terminal.go	/^	actExecuteSilent$/;"	c
+actForwardChar	src/terminal.go	/^	actForwardChar$/;"	c
+actForwardWord	src/terminal.go	/^	actForwardWord$/;"	c
+actHalfPageDown	src/terminal.go	/^	actHalfPageDown$/;"	c
+actHalfPageUp	src/terminal.go	/^	actHalfPageUp$/;"	c
+actIgnore	src/terminal.go	/^	actIgnore actionType = iota$/;"	c
+actInvalid	src/terminal.go	/^	actInvalid$/;"	c
+actJump	src/terminal.go	/^	actJump$/;"	c
+actJumpAccept	src/terminal.go	/^	actJumpAccept$/;"	c
+actKillLine	src/terminal.go	/^	actKillLine$/;"	c
+actKillWord	src/terminal.go	/^	actKillWord$/;"	c
+actMouse	src/terminal.go	/^	actMouse$/;"	c
+actNextHistory	src/terminal.go	/^	actNextHistory$/;"	c
+actPageDown	src/terminal.go	/^	actPageDown$/;"	c
+actPageUp	src/terminal.go	/^	actPageUp$/;"	c
+actPreview	src/terminal.go	/^	actPreview$/;"	c
+actPreviewDown	src/terminal.go	/^	actPreviewDown$/;"	c
+actPreviewHalfPageDown	src/terminal.go	/^	actPreviewHalfPageDown$/;"	c
+actPreviewHalfPageUp	src/terminal.go	/^	actPreviewHalfPageUp$/;"	c
+actPreviewPageDown	src/terminal.go	/^	actPreviewPageDown$/;"	c
+actPreviewPageUp	src/terminal.go	/^	actPreviewPageUp$/;"	c
+actPreviewUp	src/terminal.go	/^	actPreviewUp$/;"	c
+actPreviousHistory	src/terminal.go	/^	actPreviousHistory$/;"	c
+actPrintQuery	src/terminal.go	/^	actPrintQuery$/;"	c
+actRefreshPreview	src/terminal.go	/^	actRefreshPreview$/;"	c
+actReload	src/terminal.go	/^	actReload$/;"	c
+actReplaceQuery	src/terminal.go	/^	actReplaceQuery$/;"	c
+actRune	src/terminal.go	/^	actRune$/;"	c
+actSelectAll	src/terminal.go	/^	actSelectAll$/;"	c
+actSigStop	src/terminal.go	/^	actSigStop$/;"	c
+actToggle	src/terminal.go	/^	actToggle$/;"	c
+actToggleAll	src/terminal.go	/^	actToggleAll$/;"	c
+actToggleDown	src/terminal.go	/^	actToggleDown$/;"	c
+actToggleIn	src/terminal.go	/^	actToggleIn$/;"	c
+actToggleOut	src/terminal.go	/^	actToggleOut$/;"	c
+actTogglePreview	src/terminal.go	/^	actTogglePreview$/;"	c
+actTogglePreviewWrap	src/terminal.go	/^	actTogglePreviewWrap$/;"	c
+actToggleSort	src/terminal.go	/^	actToggleSort$/;"	c
+actToggleUp	src/terminal.go	/^	actToggleUp$/;"	c
+actTop	src/terminal.go	/^	actTop$/;"	c
+actUnixLineDiscard	src/terminal.go	/^	actUnixLineDiscard$/;"	c
+actUnixWordRubout	src/terminal.go	/^	actUnixWordRubout$/;"	c
+actUp	src/terminal.go	/^	actUp$/;"	c
+actYank	src/terminal.go	/^	actYank$/;"	c
+action	src/terminal.go	/^type action struct {$/;"	t
+actionType	src/terminal.go	/^type actionType int$/;"	t
+activeTempFiles	src/terminal.go	/^var activeTempFiles []string$/;"	v
+algo	src/algo/algo.go	/^package algo$/;"	p
+algo	src/algo/algo_test.go	/^package algo$/;"	p
+algo	src/algo/normalize.go	/^package algo$/;"	p
+alloc16	src/algo/algo.go	/^func alloc16(offset int, slab *util.Slab, size int) (int, []int16) {$/;"	f
+alloc32	src/algo/algo.go	/^func alloc32(offset int, slab *util.Slab, size int) (int, []int32) {$/;"	f
+ansiOffset	src/ansi.go	/^type ansiOffset struct {$/;"	t
+ansiRegex	src/ansi.go	/^var ansiRegex *regexp.Regexp$/;"	v
+ansiState	src/ansi.go	/^type ansiState struct {$/;"	t
+any_include?	test/test_go.rb	/^          def any_include?(val)$/;"	f	class:Tmux.until
+append	src/history.go	/^func (h *History) append(line string) error {$/;"	f
+append_line	install	/^append_line() {$/;"	f
+asciiFuzzyIndex	src/algo/algo.go	/^func asciiFuzzyIndex(input *util.Chars, pattern []rune, caseSensitive bool) int {$/;"	f
+ask	install	/^ask() {$/;"	f
+ask	uninstall	/^ask() {$/;"	f
+assert	src/merger_test.go	/^func assert(t *testing.T, cond bool, msg ...string) {$/;"	f
+assertMatch	src/algo/algo_test.go	/^func assertMatch(t *testing.T, fun Algo, caseSensitive, forward bool, input, pattern string, sidx int, eidx int, score int) {$/;"	f
+assertMatch2	src/algo/algo_test.go	/^func assertMatch2(t *testing.T, fun Algo, caseSensitive, normalize, forward bool, input, pattern string, sidx int, eidx int, score int) {$/;"	f
+atof	src/options.go	/^func atof(str string) float64 {$/;"	f
+atoi	src/options.go	/^func atoi(str string) int {$/;"	f
+atoi	src/tui/light.go	/^func atoi(s string, defaultValue int) int {$/;"	f
+atopi	src/terminal.go	/^func atopi(s string) int {$/;"	f
+attrCodes	src/tui/light.go	/^func attrCodes(attr Attr) []string {$/;"	f
+attrFor	src/tui/tui.go	/^func attrFor(color ColorPair, attr Attr) Attr {$/;"	f
+awkBlack	src/tokenizer.go	/^	awkBlack$/;"	c
+awkNil	src/tokenizer.go	/^	awkNil = iota$/;"	c
+awkTokenizer	src/tokenizer.go	/^func awkTokenizer(input string) ([]string, int) {$/;"	f
+awkWhite	src/tokenizer.go	/^	awkWhite$/;"	c
+bash	test/test_go.rb	/^    def bash$/;"	f	class:Shell
+basicMatch	src/pattern.go	/^func (p *Pattern) basicMatch(item *Item, withPos bool, slab *util.Slab) (Offset, int, *[]int) {$/;"	f
+bonusAt	src/algo/algo.go	/^func bonusAt(input *util.Chars, idx int) int16 {$/;"	f
+bonusBoundary	src/algo/algo.go	/^	bonusBoundary = scoreMatch \/ 2$/;"	c
+bonusCamel123	src/algo/algo.go	/^	bonusCamel123 = bonusBoundary + scoreGapExtention$/;"	c
+bonusConsecutive	src/algo/algo.go	/^	bonusConsecutive = -(scoreGapStart + scoreGapExtention)$/;"	c
+bonusFirstCharMultiplier	src/algo/algo.go	/^	bonusFirstCharMultiplier = 2$/;"	c
+bonusFor	src/algo/algo.go	/^func bonusFor(prevClass charClass, class charClass) int16 {$/;"	f
+bonusNonWord	src/algo/algo.go	/^	bonusNonWord = scoreMatch \/ 2$/;"	c
+buildCacheKey	src/pattern.go	/^func (p *Pattern) buildCacheKey() string {$/;"	f
+buildLists	src/merger_test.go	/^func buildLists(partiallySorted bool) ([][]Result, []Result) {$/;"	f
+buildPlusList	src/terminal.go	/^func (t *Terminal) buildPlusList(template string, forcePlus bool) (bool, []*Item) {$/;"	f
+buildResult	src/result.go	/^func buildResult(item *Item, offsets []Offset, score int) Result {$/;"	f
+byBegin	src/options.go	/^	byBegin$/;"	c
+byEnd	src/options.go	/^	byEnd$/;"	c
+byLength	src/options.go	/^	byLength$/;"	c
+byScore	src/options.go	/^	byScore criterion = iota$/;"	c
+byTimeOrder	src/terminal.go	/^type byTimeOrder []selectedItem$/;"	t
+cacheable	src/merger.go	/^func (mg *Merger) cacheable() bool {$/;"	f
+calc_size	plugin/fzf.vim	/^function! s:calc_size(max, val, dict)$/;"	f
+calculateScore	src/algo/algo.go	/^func calculateScore(caseSensitive bool, normalize bool, text *util.Chars, pattern []rune, sidx int, eidx int, withPos bool) (int, *[]int) {$/;"	f
+calculateSize	src/terminal.go	/^func calculateSize(base int, size sizeSpec, occupied int, minSize int, pad int) int {$/;"	f
+callback	plugin/fzf.vim	/^function! s:callback(dict, lines) abort$/;"	f
+cancelPreview	src/terminal.go	/^func (t *Terminal) cancelPreview() {$/;"	f
+capture	test/test_go.rb	/^  def capture$/;"	f	class:Tmux
+charClass	src/algo/algo.go	/^type charClass int$/;"	t
+charClassOf	src/algo/algo.go	/^func charClassOf(char rune) charClass {$/;"	f
+charClassOfAscii	src/algo/algo.go	/^func charClassOfAscii(char rune) charClass {$/;"	f
+charClassOfNonAscii	src/algo/algo.go	/^func charClassOfNonAscii(char rune) charClass {$/;"	f
+charLetter	src/algo/algo.go	/^	charLetter$/;"	c
+charLower	src/algo/algo.go	/^	charLower$/;"	c
+charNonWord	src/algo/algo.go	/^	charNonWord charClass = iota$/;"	c
+charNumber	src/algo/algo.go	/^	charNumber$/;"	c
+charUpper	src/algo/algo.go	/^	charUpper$/;"	c
+checkAscii	src/util/chars.go	/^func checkAscii(bytes []byte) (bool, int) {$/;"	f
+check_binary	install	/^check_binary() {$/;"	f
+chunkSize	src/constants.go	/^	chunkSize int = 100$/;"	c
+cleanTemporaryFiles	src/terminal.go	/^func cleanTemporaryFiles() {$/;"	f
+cleanse	src/tui/light.go	/^func cleanse(str string) string {$/;"	f
+cleanup	bin/fzf-tmux	/^cleanup() {$/;"	f
+clearChunkCache	src/pattern.go	/^func clearChunkCache() {$/;"	f
+clearPatternCache	src/pattern.go	/^func clearPatternCache() {$/;"	f
+closePlatform	src/tui/light_unix.go	/^func (r *LightRenderer) closePlatform() {$/;"	f
+closePlatform	src/tui/light_windows.go	/^func (r *LightRenderer) closePlatform() {$/;"	f
+cmd	plugin/fzf.vim	/^      let cmd = 'start \/wait cmd \/c '.command$/;"	v
+cmd	plugin/fzf.vim	/^function! s:cmd(bang, ...) abort$/;"	f
+colBlack	src/tui/tui.go	/^	colBlack Color = iota$/;"	c
+colBlue	src/tui/tui.go	/^	colBlue$/;"	c
+colCyan	src/tui/tui.go	/^	colCyan$/;"	c
+colDefault	src/tui/tui.go	/^	colDefault   Color = -1$/;"	c
+colGreen	src/tui/tui.go	/^	colGreen$/;"	c
+colMagenta	src/tui/tui.go	/^	colMagenta$/;"	c
+colRed	src/tui/tui.go	/^	colRed$/;"	c
+colUndefined	src/tui/tui.go	/^	colUndefined Color = -2$/;"	c
+colWhite	src/tui/tui.go	/^	colWhite$/;"	c
+colYellow	src/tui/tui.go	/^	colYellow$/;"	c
+collect	plugin/fzf.vim	/^function! s:collect(temps) abort$/;"	f
+colorCodes	src/tui/light.go	/^func colorCodes(fg Color, bg Color) []string {$/;"	f
+colorOffset	src/result.go	/^type colorOffset struct {$/;"	t
+colorOffsets	src/result.go	/^func (result *Result) colorOffsets(matchOffsets []Offset, theme *tui.ColorTheme, color tui.ColorPair, attr tui.Attr, current bool) []colorOffset {$/;"	f
+colored	src/ansi.go	/^func (s *ansiState) colored() bool {$/;"	f
+command	plugin/fzf.vim	/^      let command = a:command$/;"	v
+command	plugin/fzf.vim	/^      let command = fzf.temps.batchfile$/;"	v
+command	plugin/fzf.vim	/^    let command .= s:term_marker$/;"	v
+command	plugin/fzf.vim	/^    let command = 'cmd.exe \/C '.fzf#shellescape('set "TERM=" & start \/WAIT sh -c '.shellscript)$/;"	v
+common_sink	plugin/fzf.vim	/^function! s:common_sink(action, lines) abort$/;"	f
+compareRanks	src/result_others.go	/^func compareRanks(irank Result, jrank Result, tac bool) bool {$/;"	f
+compareRanks	src/result_x86.go	/^func compareRanks(irank Result, jrank Result, tac bool) bool {$/;"	f
+consoleDevice	src/tui/light.go	/^const consoleDevice string = "\/dev\/tty"$/;"	c
+consoleFlagsInput	src/tui/light_windows.go	/^	consoleFlagsInput  = uint32(windows.ENABLE_VIRTUAL_TERMINAL_INPUT | windows.ENABLE_PROCESSED_INPUT | windows.ENABLE_EXTENDED_FLAGS)$/;"	v
+consoleFlagsOutput	src/tui/light_windows.go	/^	consoleFlagsOutput = uint32(windows.ENABLE_VIRTUAL_TERMINAL_PROCESSING | windows.ENABLE_PROCESSED_OUTPUT | windows.DISABLE_NEWLINE_AUTO_RETURN)$/;"	v
+constrain	src/terminal.go	/^func (t *Terminal) constrain() {$/;"	f
+convertBoolToInt32	src/util/atomicbool.go	/^func convertBoolToInt32(b bool) int32 {$/;"	f
+coordinatorDelayMax	src/constants.go	/^	coordinatorDelayMax  time.Duration = 100 * time.Millisecond$/;"	c
+coordinatorDelayStep	src/constants.go	/^	coordinatorDelayStep time.Duration = 10 * time.Millisecond$/;"	c
+copySlice	src/terminal.go	/^func copySlice(slice []rune) []rune {$/;"	f
+counts	test/test_go.rb	/^          def counts$/;"	f	class:Tmux.until
+cprint2	src/tui/light.go	/^func (w *LightWindow) cprint2(fg Color, bg Color, attr Attr, text string) {$/;"	f
+create_file	install	/^create_file() {$/;"	f
+create_popup	plugin/fzf.vim	/^  function s:create_popup(hl, opts) abort$/;"	f
+create_popup	plugin/fzf.vim	/^  function! s:create_popup(hl, opts) abort$/;"	f
+criterion	src/options.go	/^type criterion int$/;"	t
+csi	src/tui/light.go	/^func (r *LightRenderer) csi(code string) {$/;"	f
+csi	src/tui/light.go	/^func (w *LightWindow) csi(code string) {$/;"	f
+csiColor	src/tui/light.go	/^func (w *LightWindow) csiColor(fg Color, bg Color, attr Attr) bool {$/;"	f
+current	src/history.go	/^func (h *History) current() string {$/;"	f
+currentItem	src/terminal.go	/^func (t *Terminal) currentItem() *Item {$/;"	f
+debugV2	src/algo/algo.go	/^func debugV2(T []rune, pattern []rune, F []int32, lastIdx int, H []int16, C []int16) {$/;"	f
+defaultCommand	src/constants.go	/^var defaultCommand string$/;"	v
+defaultEscDelay	src/tui/light.go	/^	defaultEscDelay = 100$/;"	c
+defaultHeight	src/tui/light.go	/^	defaultHeight = 24$/;"	c
+defaultHistoryMax	src/constants.go	/^	defaultHistoryMax int = 1000$/;"	c
+defaultJumpLabels	src/constants.go	/^	defaultJumpLabels string = "asdfghjklqwertyuiopzxcvbnm1234567890ASDFGHJKLQWERTYUIOPZXCVBNM`~;:,<.>\/?'\\"!@#$%^&*()[{]}-_=+"$/;"	c
+defaultKeymap	src/terminal.go	/^func defaultKeymap() map[int][]action {$/;"	f
+defaultMargin	src/options.go	/^func defaultMargin() [4]sizeSpec {$/;"	f
+defaultOptions	src/options.go	/^func defaultOptions() *Options {$/;"	f
+defaultPreviewOpts	src/options.go	/^func defaultPreviewOpts(command string) previewOpts {$/;"	f
+defaultTheme	src/tui/light_unix.go	/^func (r *LightRenderer) defaultTheme() *ColorTheme {$/;"	f
+defaultTheme	src/tui/light_windows.go	/^func (r *LightRenderer) defaultTheme() *ColorTheme {$/;"	f
+defaultTheme	src/tui/tcell.go	/^func (r *FullscreenRenderer) defaultTheme() *ColorTheme {$/;"	f
+defaultWidth	src/tui/light.go	/^	defaultWidth  = 80$/;"	c
+default_layout	plugin/fzf.vim	/^function! s:default_layout()$/;"	f
+defaults	plugin/fzf.vim	/^function! s:defaults()$/;"	f
+delChar	src/terminal.go	/^func (t *Terminal) delChar() bool {$/;"	f
+delimiterRegexp	src/options.go	/^func delimiterRegexp(str string) Delimiter {$/;"	f
+deselectItem	src/terminal.go	/^func (t *Terminal) deselectItem(item *Item) {$/;"	f
+devPrefixes	src/tui/ttyname_unix.go	/^var devPrefixes = [...]string{"\/dev\/pts\/", "\/dev\/"}$/;"	v
+displayWidth	src/terminal.go	/^func (t *Terminal) displayWidth(runes []rune) int {$/;"	f
+displayWidthWithLimit	src/terminal.go	/^func (t *Terminal) displayWidthWithLimit(runes []rune, prefixWidth int, limit int) int {$/;"	f
+dopopd	plugin/fzf.vim	/^function! s:dopopd()$/;"	f
+doubleClickDuration	src/tui/tui.go	/^	doubleClickDuration = 500 * time.Millisecond$/;"	c
+download	install	/^download() {$/;"	f
+drawBorder	src/tui/light.go	/^func (w *LightWindow) drawBorder() {$/;"	f
+drawBorder	src/tui/tcell.go	/^func (w *TcellWindow) drawBorder() {$/;"	f
+drawBorderAround	src/tui/light.go	/^func (w *LightWindow) drawBorderAround() {$/;"	f
+drawBorderHorizontal	src/tui/light.go	/^func (w *LightWindow) drawBorderHorizontal() {$/;"	f
+dupeTheme	src/options.go	/^func dupeTheme(theme *tui.ColorTheme) *tui.ColorTheme {$/;"	f
+ellipsis	src/terminal.go	/^const ellipsis string = ".."$/;"	c
+emptyLine	src/terminal.go	/^var emptyLine = itemLine{}$/;"	v
+enc_to_cp	plugin/fzf.vim	/^  function! s:enc_to_cp(str)$/;"	f
+equals	src/ansi.go	/^func (s *ansiState) equals(t *ansiState) bool {$/;"	f
+error	plugin/fzf.vim	/^function! s:error(msg)$/;"	f
+errorExit	src/options.go	/^func errorExit(msg string) {$/;"	f
+errorExit	src/tui/tui.go	/^func errorExit(message string) {$/;"	f
+escPollInterval	src/tui/light.go	/^	escPollInterval = 5$/;"	c
+escSequence	src/tui/light.go	/^func (r *LightRenderer) escSequence(sz *int) Event {$/;"	f
+escape	plugin/fzf.vim	/^function! s:escape(path)$/;"	f
+escapedColon	src/options.go	/^	escapedColon = 0$/;"	c
+escapedComma	src/options.go	/^	escapedComma = 1$/;"	c
+escapedPlus	src/options.go	/^	escapedPlus  = 2$/;"	c
+evaluateScrollOffset	src/terminal.go	/^func (t *Terminal) evaluateScrollOffset(list []*Item, height int) int {$/;"	f
+evaluate_opts	plugin/fzf.vim	/^function! s:evaluate_opts(options)$/;"	f
+execute	plugin/fzf.vim	/^function! s:execute(dict, command, use_height, temps) abort$/;"	f
+executeCommand	src/terminal.go	/^func (t *Terminal) executeCommand(template string, forcePlus bool, background bool) {$/;"	f
+executeRegexp	src/options.go	/^var executeRegexp *regexp.Regexp$/;"	v
+execute_term	plugin/fzf.vim	/^function! s:execute_term(dict, command, temps) abort$/;"	f
+execute_tmux	plugin/fzf.vim	/^function! s:execute_tmux(dict, command, temps) abort$/;"	f
+exitCancel	src/constants.go	/^	exitCancel    = -1$/;"	c
+exitError	src/constants.go	/^	exitError     = 2$/;"	c
+exitInterrupt	src/constants.go	/^	exitInterrupt = 130$/;"	c
+exitNoMatch	src/constants.go	/^	exitNoMatch   = 1$/;"	c
+exitOk	src/constants.go	/^	exitOk        = 0$/;"	c
+exit_handler	plugin/fzf.vim	/^function! s:exit_handler(code, command, ...)$/;"	f
+exit_status	plugin/fzf.vim	/^  let exit_status = v:shell_error$/;"	v
+extendedMatch	src/pattern.go	/^func (p *Pattern) extendedMatch(item *Item, withPos bool, slab *util.Slab) ([]Offset, int, *[]int) {$/;"	f
+extractColor	src/ansi.go	/^func extractColor(str string, state *ansiState, proc func(string, *ansiState) bool) (string, *[]ansiOffset, *ansiState) {$/;"	f
+fail	bin/fzf-tmux	/^fail() {$/;"	f
+fd	src/tui/light_unix.go	/^func (r *LightRenderer) fd() int {$/;"	f
+feed	src/reader.go	/^func (r *Reader) feed(src io.Reader) {$/;"	f
+fill	src/tui/light.go	/^func (w *LightWindow) fill(str string, onMove func()) FillReturn {$/;"	f
+fill	src/tui/tcell.go	/^func fill(x, y, w, h int, n ColorPair, r rune) {$/;"	f
+fillString	src/tui/tcell.go	/^func (w *TcellWindow) fillString(text string, pair ColorPair, a Attr) FillReturn {$/;"	f
+fin	src/reader.go	/^func (r *Reader) fin(success bool) {$/;"	f
+findAnsiStart	src/ansi.go	/^func findAnsiStart(str string) int {$/;"	f
+findFirstMatch	src/terminal.go	/^func findFirstMatch(pattern string, str string) int {$/;"	f
+findLastMatch	src/terminal.go	/^func findLastMatch(pattern string, str string) int {$/;"	f
+findOffset	src/tui/light_unix.go	/^func (r *LightRenderer) findOffset() (row int, col int) {$/;"	f
+findOffset	src/tui/light_windows.go	/^func (r *LightRenderer) findOffset() (row int, col int) {$/;"	f
+firstKey	src/options.go	/^func firstKey(keymap map[int]string) int {$/;"	f
+fish	test/test_go.rb	/^    def fish$/;"	f
+flush	src/tui/light.go	/^func (r *LightRenderer) flush() {$/;"	f
+focus	test/test_go.rb	/^  def focus$/;"	f	class:Tmux
+fzf	plugin/fzf.vim	/^      let fzf.buf = term_start([&shell, &shellcmdflag, command], term_opts)$/;"	v
+fzf	plugin/fzf.vim	/^      let fzf.temps.batchfile = s:fzf_tempname().'.bat'$/;"	v
+fzf	src/ansi.go	/^package fzf$/;"	p
+fzf	src/ansi_test.go	/^package fzf$/;"	p
+fzf	src/cache.go	/^package fzf$/;"	p
+fzf	src/cache_test.go	/^package fzf$/;"	p
+fzf	src/chunklist.go	/^package fzf$/;"	p
+fzf	src/chunklist_test.go	/^package fzf$/;"	p
+fzf	src/constants.go	/^package fzf$/;"	p
+fzf	src/core.go	/^package fzf$/;"	p
+fzf	src/history.go	/^package fzf$/;"	p
+fzf	src/history_test.go	/^package fzf$/;"	p
+fzf	src/item.go	/^package fzf$/;"	p
+fzf	src/item_test.go	/^package fzf$/;"	p
+fzf	src/matcher.go	/^package fzf$/;"	p
+fzf	src/merger.go	/^package fzf$/;"	p
+fzf	src/merger_test.go	/^package fzf$/;"	p
+fzf	src/options.go	/^package fzf$/;"	p
+fzf	src/options_test.go	/^package fzf$/;"	p
+fzf	src/pattern.go	/^package fzf$/;"	p
+fzf	src/pattern_test.go	/^package fzf$/;"	p
+fzf	src/reader.go	/^package fzf$/;"	p
+fzf	src/reader_test.go	/^package fzf$/;"	p
+fzf	src/result.go	/^package fzf$/;"	p
+fzf	src/result_others.go	/^package fzf$/;"	p
+fzf	src/result_test.go	/^package fzf$/;"	p
+fzf	src/result_x86.go	/^package fzf$/;"	p
+fzf	src/terminal.go	/^package fzf$/;"	p
+fzf	src/terminal_test.go	/^package fzf$/;"	p
+fzf	src/terminal_unix.go	/^package fzf$/;"	p
+fzf	src/terminal_windows.go	/^package fzf$/;"	p
+fzf	src/tokenizer.go	/^package fzf$/;"	p
+fzf	src/tokenizer_test.go	/^package fzf$/;"	p
+fzf	test/test_go.rb	/^  def fzf(*opts)$/;"	f	class:TestBase
+fzf!	test/test_go.rb	/^  def fzf!(*opts)$/;"	f	class:TestBase
+fzf#exec	plugin/fzf.vim	/^function! fzf#exec()$/;"	f
+fzf#install	plugin/fzf.vim	/^function! fzf#install()$/;"	f
+fzf#run	plugin/fzf.vim	/^function! fzf#run(...) abort$/;"	f
+fzf#shellescape	plugin/fzf.vim	/^function! fzf#shellescape(arg, ...)$/;"	f
+fzf#wrap	plugin/fzf.vim	/^function! fzf#wrap(...)$/;"	f
+fzf.on_exit	plugin/fzf.vim	/^  function! fzf.on_exit(id, code, ...)$/;"	f
+fzf_call	plugin/fzf.vim	/^  function! s:fzf_call(fn, ...)$/;"	f
+fzf_expand	plugin/fzf.vim	/^function! s:fzf_expand(fmt)$/;"	f
+fzf_fnamemodify	plugin/fzf.vim	/^function! s:fzf_fnamemodify(fname, mods)$/;"	f
+fzf_getcwd	plugin/fzf.vim	/^function! s:fzf_getcwd()$/;"	f
+fzf_popd	plugin/fzf.vim	/^augroup fzf_popd$/;"	a
+fzf_tempname	plugin/fzf.vim	/^function! s:fzf_tempname()$/;"	f
+fzf_tmux	plugin/fzf.vim	/^function! s:fzf_tmux(dict)$/;"	f
+g:loaded_fzf	plugin/fzf.vim	/^let g:loaded_fzf = 1$/;"	v
+getBytes	src/tui/light.go	/^func (r *LightRenderer) getBytes() []byte {$/;"	f
+getBytesInternal	src/tui/light.go	/^func (r *LightRenderer) getBytesInternal(buffer []byte, nonblock bool) []byte {$/;"	f
+getEnv	src/tui/light.go	/^func getEnv(name string, defaultValue int) int {$/;"	f
+get_color	plugin/fzf.vim	/^function! s:get_color(attr, ...)$/;"	f
+getch	src/tui/light_unix.go	/^func (r *LightRenderer) getch(nonblock bool) (int, bool) {$/;"	f
+getch	src/tui/light_windows.go	/^func (r *LightRenderer) getch(nonblock bool) (int, bool) {$/;"	f
+getpos	plugin/fzf.vim	/^function! s:getpos()$/;"	f
+go	test/test_go.rb	/^  def go(args)$/;"	f
+hasPreviewAction	src/terminal.go	/^func hasPreviewAction(opts *Options) bool {$/;"	f
+hasPreviewFlags	src/terminal.go	/^func hasPreviewFlags(template string) (slot bool, plus bool, query bool) {$/;"	f
+hasPreviewWindow	src/terminal.go	/^func (t *Terminal) hasPreviewWindow() bool {$/;"	f
+hasPreviewer	src/terminal.go	/^func (t *Terminal) hasPreviewer() bool {$/;"	f
+has_any	plugin/fzf.vim	/^function! s:has_any(dict, keys)$/;"	f
+help	bin/fzf-tmux	/^help() {$/;"	f
+help	install	/^help() {$/;"	f
+help	src/options.go	/^func help(code int) {$/;"	f
+help	uninstall	/^help() {$/;"	f
+indexAt	src/algo/algo.go	/^func indexAt(index int, max int, forward bool) int {$/;"	f
+infoDefault	src/options.go	/^	infoDefault infoStyle = iota$/;"	c
+infoHidden	src/options.go	/^	infoHidden$/;"	c
+infoInline	src/options.go	/^	infoInline$/;"	c
+infoStyle	src/options.go	/^type infoStyle int$/;"	t
+init	src/ansi.go	/^func init() {$/;"	f
+init	src/constants.go	/^func init() {$/;"	f
+init	src/options.go	/^func init() {$/;"	f
+init	src/pattern.go	/^func init() {$/;"	f
+init	src/pattern_test.go	/^func init() {$/;"	f
+init	src/terminal.go	/^func init() {$/;"	f
+init	src/tui/tui.go	/^func init() {$/;"	f
+initPalette	src/tui/tui.go	/^func initPalette(theme *ColorTheme) {$/;"	f
+initPlatform	src/tui/light_unix.go	/^func (r *LightRenderer) initPlatform() error {$/;"	f
+initPlatform	src/tui/light_windows.go	/^func (r *LightRenderer) initPlatform() error {$/;"	f
+initScreen	src/tui/tcell.go	/^func (r *FullscreenRenderer) initScreen() {$/;"	f
+initTheme	src/tui/tui.go	/^func initTheme(theme *ColorTheme, baseTheme *ColorTheme, forceBlack bool) {$/;"	f
+initialDelay	src/constants.go	/^	initialDelay      = 20 * time.Millisecond$/;"	c
+initialDelayTac	src/constants.go	/^	initialDelayTac   = 100 * time.Millisecond$/;"	c
+initialize	test/test_go.rb	/^  def initialize(shell = :bash)$/;"	f	class:Tmux
+interpretCode	src/ansi.go	/^func interpretCode(ansiCode string, prevState *ansiState) *ansiState {$/;"	f
+is24	src/tui/tui.go	/^func (c Color) is24() bool {$/;"	f
+isAlphabet	src/options.go	/^func isAlphabet(char uint8) bool {$/;"	f
+isAscii	src/algo/algo.go	/^func isAscii(runes []rune) bool {$/;"	f
+isExecuteAction	src/options.go	/^func isExecuteAction(str string) actionType {$/;"	f
+isNumeric	src/options.go	/^func isNumeric(char uint8) bool {$/;"	f
+isPreviewEnabled	src/terminal.go	/^func (t *Terminal) isPreviewEnabled() bool {$/;"	f
+itemLine	src/terminal.go	/^type itemLine struct {$/;"	t
+item_count	test/test_go.rb	/^          def item_count$/;"	f	class:Tmux.until
+iter	src/pattern.go	/^func (p *Pattern) iter(pfun algo.Algo, tokens []Token, caseSensitive bool, normalize bool, forward bool, pattern []rune, withPos bool, slab *util.Slab) (Offset, int, *[]int) {$/;"	f
+joinTokens	src/tokenizer.go	/^func joinTokens(tokens []Token) string {$/;"	f
+jumpAcceptEnabled	src/terminal.go	/^	jumpAcceptEnabled$/;"	c
+jumpDisabled	src/terminal.go	/^	jumpDisabled jumpMode = iota$/;"	c
+jumpEnabled	src/terminal.go	/^	jumpEnabled$/;"	c
+jumpMode	src/terminal.go	/^type jumpMode int$/;"	t
+keyMatch	src/terminal.go	/^func keyMatch(key int, event tui.Event) bool {$/;"	f
+kill	test/test_go.rb	/^  def kill$/;"	f	class:Tmux
+killPreview	src/terminal.go	/^func (t *Terminal) killPreview(code int) {$/;"	f
+lastChunk	src/chunklist.go	/^func (cl *ChunkList) lastChunk() *Chunk {$/;"	f
+layoutDefault	src/options.go	/^	layoutDefault layoutType = iota$/;"	c
+layoutReverse	src/options.go	/^	layoutReverse$/;"	c
+layoutReverseList	src/options.go	/^	layoutReverseList$/;"	c
+layoutType	src/options.go	/^type layoutType int$/;"	t
+link_fzf_in_path	install	/^link_fzf_in_path() {$/;"	f
+main	main.go	/^func main() {$/;"	f
+main	main.go	/^package main$/;"	p
+makeSpace	src/tui/light.go	/^func (r *LightRenderer) makeSpace() {$/;"	f
+matchChunk	src/pattern.go	/^func (p *Pattern) matchChunk(chunk *Chunk, space []Result, slab *util.Slab) []Result {$/;"	f
+match_count	test/test_go.rb	/^          def match_count$/;"	f	class:Tmux.until
+maxDisplayWidthCalc	src/terminal.go	/^	maxDisplayWidthCalc = 1024$/;"	c
+maxInputBuffer	src/tui/light.go	/^	maxInputBuffer  = 10 * 1024$/;"	c
+maxItems	src/terminal.go	/^func (t *Terminal) maxItems() int {$/;"	f
+maxMulti	src/constants.go	/^	maxMulti          = math.MaxInt32$/;"	c
+maxPartitions	src/constants.go	/^	maxPartitions           = 32$/;"	c
+maxPatternLength	src/constants.go	/^	maxPatternLength  = 300$/;"	c
+mergedGet	src/merger.go	/^func (mg *Merger) mergedGet(idx int) Result {$/;"	f
+mergerCacheMax	src/constants.go	/^	mergerCacheMax int = 100000$/;"	c
+minHeight	src/terminal.go	/^	minHeight = 4$/;"	c
+minItem	src/item.go	/^var minItem = Item{text: util.Chars{Index: -1}}$/;"	v
+minRank	src/result.go	/^func minRank() Result {$/;"	f
+minWidth	src/terminal.go	/^	minWidth  = 16$/;"	c
+mouseSequence	src/tui/light.go	/^func (r *LightRenderer) mouseSequence(sz *int) Event {$/;"	f
+move	src/terminal.go	/^func (t *Terminal) move(y int, x int, clear bool) {$/;"	f
+move	src/tui/light.go	/^func (r *LightRenderer) move(y int, x int) {$/;"	f
+newItem	src/terminal_test.go	/^func newItem(str string) *Item {$/;"	f
+newRange	src/tokenizer.go	/^func newRange(begin int, end int) Range {$/;"	f
+new_shell	test/test_go.rb	/^  def new_shell$/;"	f	class:TestBash
+new_shell	test/test_go.rb	/^  def new_shell$/;"	f	class:TestFish
+new_shell	test/test_go.rb	/^  def new_shell$/;"	f	class:TestZsh
+next	src/history.go	/^func (h *History) next() string {$/;"	f
+nextInt	src/options.go	/^func nextInt(args []string, i *int, message string) int {$/;"	f
+nextString	src/options.go	/^func nextString(args []string, i *int, message string) string {$/;"	f
+noInfoLine	src/terminal.go	/^func (t *Terminal) noInfoLine() bool {$/;"	f
+normalizeRune	src/algo/algo.go	/^func normalizeRune(r rune) rune {$/;"	f
+normalized	src/algo/normalize.go	/^var normalized map[rune]rune = map[rune]rune{$/;"	v
+notifyOnCont	src/terminal_unix.go	/^func notifyOnCont(resizeChan chan<- os.Signal) {$/;"	f
+notifyOnCont	src/terminal_windows.go	/^func notifyOnCont(resizeChan chan<- os.Signal) {$/;"	f
+notifyOnResize	src/terminal_unix.go	/^func notifyOnResize(resizeChan chan<- os.Signal) {$/;"	f
+notifyOnResize	src/terminal_windows.go	/^func notifyOnResize(resizeChan chan<- os.Signal) {$/;"	f
+notifyStop	src/terminal_unix.go	/^func notifyStop(p *os.Process) {$/;"	f
+notifyStop	src/terminal_windows.go	/^func notifyStop(p *os.Process) {$/;"	f
+numPartitionsMultiplier	src/constants.go	/^	numPartitionsMultiplier = 8$/;"	c
+numericPrefix	src/terminal.go	/^var numericPrefix *regexp.Regexp$/;"	v
+offsetPollTries	src/tui/light.go	/^	offsetPollTries = 10$/;"	c
+offsetRegexp	src/tui/light.go	/^var offsetRegexp *regexp.Regexp = regexp.MustCompile("(.*)\\x1b\\\\[([0-9]+);([0-9]+)R")$/;"	v
+offsetRegexpBegin	src/tui/light.go	/^var offsetRegexpBegin *regexp.Regexp = regexp.MustCompile("^\\x1b\\\\[[0-9]+;[0-9]+R")$/;"	v
+open	plugin/fzf.vim	/^function! s:open(cmd, target)$/;"	f
+openTtyIn	src/tui/light_unix.go	/^func openTtyIn() *os.File {$/;"	f
+openTtyIn	src/tui/light_windows.go	/^func openTtyIn() *os.File {$/;"	f
+optString	src/options.go	/^func optString(arg string, prefixes ...string) (bool, string) {$/;"	f
+optionalNextString	src/options.go	/^func optionalNextString(args []string, i *int) (bool, string) {$/;"	f
+optionalNumeric	src/options.go	/^func optionalNumeric(args []string, i *int, defaultValue int) int {$/;"	f
+optionalRunes	src/util/chars.go	/^func (chars *Chars) optionalRunes() []rune {$/;"	f
+opts	plugin/fzf.vim	/^    let opts['sink*'] = remove(opts, 'sink')$/;"	v
+optsFor	src/options_test.go	/^func optsFor(words ...string) *Options {$/;"	f
+origin	src/tui/light.go	/^func (r *LightRenderer) origin() {$/;"	f
+output	src/terminal.go	/^func (t *Terminal) output() bool {$/;"	f
+overflow	src/terminal.go	/^func (t *Terminal) overflow(runes []rune, max int) bool {$/;"	f
+overflow32	src/util/chars.go	/^	overflow32 uint32 = 0x80808080$/;"	c
+overflow64	src/util/chars.go	/^	overflow64 uint64 = 0x8080808080808080$/;"	c
+override	src/history.go	/^func (h *History) override(str string) {$/;"	f
+parseAlgo	src/options.go	/^func parseAlgo(str string) algo.Algo {$/;"	f
+parseBorder	src/options.go	/^func parseBorder(str string, optional bool) tui.BorderShape {$/;"	f
+parseHeight	src/options.go	/^func parseHeight(str string) sizeSpec {$/;"	f
+parseInfoStyle	src/options.go	/^func parseInfoStyle(str string) infoStyle {$/;"	f
+parseKeyChords	src/options.go	/^func parseKeyChords(str string, message string) map[int]string {$/;"	f
+parseKeymap	src/options.go	/^func parseKeymap(keymap map[int][]action, str string) {$/;"	f
+parseLayout	src/options.go	/^func parseLayout(str string) layoutType {$/;"	f
+parseMargin	src/options.go	/^func parseMargin(margin string) [4]sizeSpec {$/;"	f
+parseOptions	src/options.go	/^func parseOptions(opts *Options, allArgs []string) {$/;"	f
+parsePlaceholder	src/terminal.go	/^func parsePlaceholder(match string) (bool, string, placeholderFlags) {$/;"	f
+parsePreviewWindow	src/options.go	/^func parsePreviewWindow(opts *previewOpts, input string) {$/;"	f
+parsePrompt	src/terminal.go	/^func (t *Terminal) parsePrompt(prompt string) (func(), int) {$/;"	f
+parseSize	src/options.go	/^func parseSize(str string, maxPercent float64, label string) sizeSpec {$/;"	f
+parseTerms	src/pattern.go	/^func parseTerms(fuzzy bool, caseMode Case, normalize bool, str string) []termSet {$/;"	f
+parseTheme	src/options.go	/^func parseTheme(defaultTheme *tui.ColorTheme, str string) *tui.ColorTheme {$/;"	f
+parseTiebreak	src/options.go	/^func parseTiebreak(str string) []criterion {$/;"	f
+parseToggleSort	src/options.go	/^func parseToggleSort(keymap map[int][]action, str string) {$/;"	f
+partialResult	src/matcher.go	/^type partialResult struct {$/;"	t
+paste	test/test_go.rb	/^  def paste(str)$/;"	f	class:Tmux
+placeCursor	src/terminal.go	/^func (t *Terminal) placeCursor() {$/;"	f
+placeholder	src/terminal.go	/^var placeholder *regexp.Regexp$/;"	v
+placeholderFlags	src/terminal.go	/^type placeholderFlags struct {$/;"	t
+popup	plugin/fzf.vim	/^function! s:popup(opts) abort$/;"	f
+popup_support	plugin/fzf.vim	/^function! s:popup_support()$/;"	f
+posArray	src/algo/algo.go	/^func posArray(withPos bool, len int) *[]int {$/;"	f
+posDown	src/options.go	/^	posDown$/;"	c
+posLeft	src/options.go	/^	posLeft$/;"	c
+posRight	src/options.go	/^	posRight$/;"	c
+posUp	src/options.go	/^	posUp windowPosition = iota$/;"	c
+postProcessOptions	src/options.go	/^func postProcessOptions(opts *Options) {$/;"	f
+prepare	test/test_go.rb	/^  def prepare$/;"	f
+present	plugin/fzf.vim	/^function! s:present(dict, ...)$/;"	f
+previewCancelWait	src/constants.go	/^	previewCancelWait = 500 * time.Millisecond$/;"	c
+previewOpts	src/options.go	/^type previewOpts struct {$/;"	t
+previewRequest	src/terminal.go	/^type previewRequest struct {$/;"	t
+previewResult	src/terminal.go	/^type previewResult struct {$/;"	t
+previewer	src/terminal.go	/^type previewer struct {$/;"	t
+previous	src/history.go	/^func (h *History) previous() string {$/;"	f
+printAll	src/terminal.go	/^func (t *Terminal) printAll() {$/;"	f
+printHeader	src/terminal.go	/^func (t *Terminal) printHeader() {$/;"	f
+printHighlighted	src/terminal.go	/^func (t *Terminal) printHighlighted(result Result, attr tui.Attr, col1 tui.ColorPair, col2 tui.ColorPair, current bool, match bool) int {$/;"	f
+printInfo	src/terminal.go	/^func (t *Terminal) printInfo() {$/;"	f
+printItem	src/terminal.go	/^func (t *Terminal) printItem(result Result, line int, i int, current bool) {$/;"	f
+printList	src/terminal.go	/^func (t *Terminal) printList() {$/;"	f
+printPreview	src/terminal.go	/^func (t *Terminal) printPreview() {$/;"	f
+printPrompt	src/terminal.go	/^func (t *Terminal) printPrompt() {$/;"	f
+printString	src/tui/tcell.go	/^func (w *TcellWindow) printString(text string, pair ColorPair, a Attr) {$/;"	f
+processTabs	src/terminal.go	/^func (t *Terminal) processTabs(runes []rune, prefixWidth int) (string, int) {$/;"	f
+progressMinDuration	src/constants.go	/^	progressMinDuration     = 200 * time.Millisecond$/;"	c
+protector	src/protector/protector.go	/^package protector$/;"	p
+protector	src/protector/protector_openbsd.go	/^package protector$/;"	p
+push	src/chunklist.go	/^func (c *Chunk) push(trans ItemBuilder, data []byte) bool {$/;"	f
+pushd	plugin/fzf.vim	/^function! s:pushd(dict)$/;"	f
+queryCache	src/cache.go	/^type queryCache map[string][]Result$/;"	t
+queryCacheMax	src/constants.go	/^	queryCacheMax int = chunkSize \/ 5$/;"	c
+quoteEntry	src/terminal.go	/^func quoteEntry(entry string) string {$/;"	f
+quoteEntryCmd	src/terminal.go	/^func quoteEntryCmd(entry string) string {$/;"	f
+randResult	src/merger_test.go	/^func randResult() Result {$/;"	f
+rangeEllipsis	src/tokenizer.go	/^const rangeEllipsis = 0$/;"	c
+readFiles	src/reader.go	/^func (r *Reader) readFiles() bool {$/;"	f
+readFromCommand	src/reader.go	/^func (r *Reader) readFromCommand(shell *string, command string) bool {$/;"	f
+readFromStdin	src/reader.go	/^func (r *Reader) readFromStdin() bool {$/;"	f
+readerBufferSize	src/constants.go	/^	readerBufferSize       = 64 * 1024$/;"	c
+readerPollIntervalMax	src/constants.go	/^	readerPollIntervalMax  = 50 * time.Millisecond$/;"	c
+readerPollIntervalMin	src/constants.go	/^	readerPollIntervalMin  = 10 * time.Millisecond$/;"	c
+readerPollIntervalStep	src/constants.go	/^	readerPollIntervalStep = 5 * time.Millisecond$/;"	c
+readonce	test/test_go.rb	/^  def readonce$/;"	f	class:TestBase
+redraw	src/terminal.go	/^func (t *Terminal) redraw() {$/;"	f
+refresh	src/terminal.go	/^func (t *Terminal) refresh() {$/;"	f
+remove	uninstall	/^remove() {$/;"	f
+remove_line	uninstall	/^remove_line() {$/;"	f
+repeat	src/tui/light.go	/^func repeat(r rune, times int) string {$/;"	f
+replacePlaceholder	src/terminal.go	/^func (t *Terminal) replacePlaceholder(template string, forcePlus bool, input string, list []*Item) string {$/;"	f
+replacePlaceholder	src/terminal.go	/^func replacePlaceholder(template string, stripAnsi bool, delimiter Delimiter, printsep string, forcePlus bool, query string, allItems []*Item) string {$/;"	f
+reqClose	src/terminal.go	/^	reqClose$/;"	c
+reqHeader	src/terminal.go	/^	reqHeader$/;"	c
+reqInfo	src/terminal.go	/^	reqInfo$/;"	c
+reqJump	src/terminal.go	/^	reqJump$/;"	c
+reqList	src/terminal.go	/^	reqList$/;"	c
+reqPreviewDisplay	src/terminal.go	/^	reqPreviewDisplay$/;"	c
+reqPreviewEnqueue	src/terminal.go	/^	reqPreviewEnqueue$/;"	c
+reqPreviewRefresh	src/terminal.go	/^	reqPreviewRefresh$/;"	c
+reqPrintQuery	src/terminal.go	/^	reqPrintQuery$/;"	c
+reqPrompt	src/terminal.go	/^	reqPrompt util.EventType = iota$/;"	c
+reqQuit	src/terminal.go	/^	reqQuit$/;"	c
+reqRedraw	src/terminal.go	/^	reqRedraw$/;"	c
+reqRefresh	src/terminal.go	/^	reqRefresh$/;"	c
+reqReinit	src/terminal.go	/^	reqReinit$/;"	c
+reqReset	src/matcher.go	/^	reqReset$/;"	c
+reqRetry	src/matcher.go	/^	reqRetry util.EventType = iota$/;"	c
+resizeWindows	src/terminal.go	/^func (t *Terminal) resizeWindows() {$/;"	f
+restart	src/reader.go	/^func (r *Reader) restart(command string) {$/;"	f
+restoreTerminal	src/tui/light_unix.go	/^func (r *LightRenderer) restoreTerminal() {$/;"	f
+restoreTerminal	src/tui/light_windows.go	/^func (r *LightRenderer) restoreTerminal() error {$/;"	f
+reverseStringArray	src/terminal.go	/^func reverseStringArray(input []string) []string {$/;"	f
+revision	main.go	/^var revision string$/;"	v
+rmcup	src/tui/light.go	/^func (r *LightRenderer) rmcup() {$/;"	f
+rubout	src/terminal.go	/^func (t *Terminal) rubout(pattern string) {$/;"	f
+s:base_dir	plugin/fzf.vim	/^  let s:base_dir = expand('<sfile>:h:h')$/;"	v
+s:cpo_save	plugin/fzf.vim	/^let s:cpo_save = &cpo$/;"	v
+s:default_action	plugin/fzf.vim	/^let s:default_action = {$/;"	v
+s:fzf_go	plugin/fzf.vim	/^let s:fzf_go = s:base_dir.'\/bin\/fzf'$/;"	v
+s:fzf_tmux	plugin/fzf.vim	/^let s:fzf_tmux = s:base_dir.'\/bin\/fzf-tmux'$/;"	v
+s:is_win	plugin/fzf.vim	/^let s:is_win = has('win32') || has('win64')$/;"	v
+s:launcher	plugin/fzf.vim	/^  let s:launcher = '%s'$/;"	v
+s:launcher	plugin/fzf.vim	/^  let s:launcher = function('s:xterm_launcher')$/;"	v
+s:layout_keys	plugin/fzf.vim	/^let s:layout_keys = ['window', 'tmux', 'up', 'down', 'left', 'right']$/;"	v
+s:term_marker	plugin/fzf.vim	/^  let s:term_marker = ";#FZF"$/;"	v
+s:term_marker	plugin/fzf.vim	/^  let s:term_marker = '&::FZF'$/;"	v
+scan	src/matcher.go	/^func (m *Matcher) scan(request MatchRequest) (*Merger, bool) {$/;"	f
+scoreGapExtention	src/algo/algo.go	/^	scoreGapExtention = -1$/;"	c
+scoreGapStart	src/algo/algo.go	/^	scoreGapStart     = -3$/;"	c
+scoreMatch	src/algo/algo.go	/^	scoreMatch        = 16$/;"	c
+searchRequest	src/terminal.go	/^type searchRequest struct {$/;"	t
+selectItem	src/terminal.go	/^func (t *Terminal) selectItem(item *Item) bool {$/;"	f
+select_count	test/test_go.rb	/^          def select_count$/;"	f	class:Tmux.until
+selectedItem	src/terminal.go	/^type selectedItem struct {$/;"	t
+send_keys	test/test_go.rb	/^  def send_keys(*args)$/;"	f	class:Tmux
+setBg	src/tui/light.go	/^func (w *LightWindow) setBg() {$/;"	f
+set_var	test/test_go.rb	/^  def set_var(name, val)$/;"	f	class:TestBase.TestShell
+set_var	test/test_go.rb	/^  def set_var(name, val)$/;"	f	class:TestFish
+setup	test/test_go.rb	/^  def setup$/;"	f	class:TestBase.TestGoFZF
+setup	test/test_go.rb	/^  def setup$/;"	f	class:TestBase.TestShell
+setupTerminal	src/tui/light_unix.go	/^func (r *LightRenderer) setupTerminal() {$/;"	f
+setupTerminal	src/tui/light_windows.go	/^func (r *LightRenderer) setupTerminal() error {$/;"	f
+shell	test/test_go.rb	/^  def shell$/;"	f	class:TestBash
+shell	test/test_go.rb	/^  def shell$/;"	f	class:TestFish
+shell	test/test_go.rb	/^  def shell$/;"	f	class:TestZsh
+shellesc_cmd	plugin/fzf.vim	/^function! s:shellesc_cmd(arg)$/;"	f
+shellscript	plugin/fzf.vim	/^    let shellscript = s:fzf_tempname()$/;"	v
+shortpath	plugin/fzf.vim	/^function! s:shortpath()$/;"	f
+sizeSpec	src/options.go	/^type sizeSpec struct {$/;"	t
+slab	src/pattern_test.go	/^var slab *util.Slab$/;"	v
+slab16Size	src/constants.go	/^	slab16Size int = 100 * 1024 \/\/ 200KB * 32 = 12.8MB$/;"	c
+slab32Size	src/constants.go	/^	slab32Size int = 2048       \/\/ 8KB * 32 = 256KB$/;"	c
+sliceChunks	src/matcher.go	/^func (m *Matcher) sliceChunks(chunks []*Chunk) [][]*Chunk {$/;"	f
+smcup	src/tui/light.go	/^func (r *LightRenderer) smcup() {$/;"	f
+sortCriteria	src/result.go	/^var sortCriteria []criterion$/;"	v
+sortSelected	src/terminal.go	/^func (t *Terminal) sortSelected() []selectedItem {$/;"	f
+spinnerDuration	src/constants.go	/^	spinnerDuration   = 100 * time.Millisecond$/;"	c
+split	plugin/fzf.vim	/^function! s:split(dict)$/;"	f
+splitNth	src/options.go	/^func splitNth(str string) []Range {$/;"	f
+splittable	plugin/fzf.vim	/^function! s:splittable(dict)$/;"	f
+startEventPoller	src/reader.go	/^func (r *Reader) startEventPoller() {$/;"	f
+stderr	src/tui/light.go	/^func (r *LightRenderer) stderr(str string) {$/;"	f
+stderrInternal	src/tui/light.go	/^func (r *LightRenderer) stderrInternal(str string, allowNLCR bool) {$/;"	f
+stderrInternal	src/tui/light.go	/^func (w *LightWindow) stderrInternal(str string, allowNLCR bool) {$/;"	f
+stdin	plugin/fzf.vim	/^    let stdin = has_key(a:dict, 'source') ? '' : '< \/dev\/tty'$/;"	v
+strLines	src/options.go	/^func strLines(str string) []string {$/;"	f
+style	src/tui/tcell.go	/^func (p ColorPair) style() tcell.Style {$/;"	f
+teardown	test/test_go.rb	/^  def teardown$/;"	f	class:TestBase.TestGoFZF
+teardown	test/test_go.rb	/^  def teardown$/;"	f	class:TestBase.TestShell
+tempname	test/test_go.rb	/^  def tempname$/;"	f	class:TestBase
+term	src/pattern.go	/^type term struct {$/;"	t
+termEqual	src/pattern.go	/^	termEqual$/;"	c
+termExact	src/pattern.go	/^	termExact$/;"	c
+termFuzzy	src/pattern.go	/^	termFuzzy termType = iota$/;"	c
+termPrefix	src/pattern.go	/^	termPrefix$/;"	c
+termSet	src/pattern.go	/^type termSet []term$/;"	t
+termSuffix	src/pattern.go	/^	termSuffix$/;"	c
+termType	src/pattern.go	/^type termType int$/;"	t
+term_opts	plugin/fzf.vim	/^        let term_opts.curwin = 1$/;"	v
+term_opts	plugin/fzf.vim	/^        let term_opts.hidden = 1$/;"	v
+term_opts	plugin/fzf.vim	/^      let term_opts = {'exit_cb': function(fzf.on_exit)}$/;"	v
+terminate	src/reader.go	/^func (r *Reader) terminate() {$/;"	f
+test_accept_non_empty	test/test_go.rb	/^  def test_accept_non_empty$/;"	f	class:TestBase.TestGoFZF
+test_accept_non_empty_with_empty_list	test/test_go.rb	/^  def test_accept_non_empty_with_empty_list$/;"	f	class:TestBase.TestGoFZF
+test_accept_non_empty_with_multi_selection	test/test_go.rb	/^  def test_accept_non_empty_with_multi_selection$/;"	f	class:TestBase.TestGoFZF
+test_alt_c	test/test_go.rb	/^  def test_alt_c$/;"	f	class:TestBase.TestShell
+test_alt_c_command	test/test_go.rb	/^  def test_alt_c_command$/;"	f	class:TestBase.TestShell
+test_backward_delete_char_eof	test/test_go.rb	/^  def test_backward_delete_char_eof$/;"	f	class:TestBase.TestGoFZF
+test_backward_eof	test/test_go.rb	/^  def test_backward_eof$/;"	f	class:TestBase.TestGoFZF
+test_bind	test/test_go.rb	/^  def test_bind$/;"	f	class:TestBase.TestGoFZF
+test_bind_print_query	test/test_go.rb	/^  def test_bind_print_query$/;"	f	class:TestBase.TestGoFZF
+test_bind_replace_query	test/test_go.rb	/^  def test_bind_replace_query$/;"	f	class:TestBase.TestGoFZF
+test_cancel	test/test_go.rb	/^  def test_cancel$/;"	f	class:TestBase.TestGoFZF
+test_change_top	test/test_go.rb	/^  def test_change_top$/;"	f	class:TestBase.TestGoFZF
+test_clear_list_when_header_lines_changed_due_to_reload	test/test_go.rb	/^  def test_clear_list_when_header_lines_changed_due_to_reload$/;"	f	class:TestBase.TestGoFZF
+test_clear_query	test/test_go.rb	/^  def test_clear_query$/;"	f	class:TestBase.TestGoFZF
+test_clear_selection	test/test_go.rb	/^  def test_clear_selection$/;"	f	class:TestBase.TestGoFZF
+test_complete_quoted_command	test/test_go.rb	/^  def test_complete_quoted_command$/;"	f	class:TestZsh
+test_ctrl_r	test/test_go.rb	/^  def test_ctrl_r$/;"	f	class:TestBase.TestShell
+test_ctrl_r_abort	test/test_go.rb	/^  def test_ctrl_r_abort$/;"	f	class:TestBase.TestShell
+test_ctrl_r_multiline	test/test_go.rb	/^  def test_ctrl_r_multiline$/;"	f	class:TestBase.TestShell
+test_ctrl_t	test/test_go.rb	/^  def test_ctrl_t$/;"	f	class:TestBase.TestShell
+test_ctrl_t_unicode	test/test_go.rb	/^  def test_ctrl_t_unicode$/;"	f	class:TestBase.TestShell
+test_custom_completion	test/test_go.rb	/^  def test_custom_completion$/;"	f	class:CompletionTest
+test_custom_completion_api	test/test_go.rb	/^  def test_custom_completion_api$/;"	f	class:CompletionTest
+test_cycle	test/test_go.rb	/^  def test_cycle$/;"	f	class:TestBase.TestGoFZF
+test_default_extended	test/test_go.rb	/^  def test_default_extended$/;"	f	class:TestBase.TestGoFZF
+test_dir_completion	test/test_go.rb	/^  def test_dir_completion$/;"	f	class:CompletionTest
+test_dynamic_completion_loader	test/test_go.rb	/^  def test_dynamic_completion_loader$/;"	f	class:TestBash
+test_escaped_meta_characters	test/test_go.rb	/^  def test_escaped_meta_characters$/;"	f	class:TestBase.TestGoFZF
+test_exact	test/test_go.rb	/^  def test_exact$/;"	f	class:TestBase.TestGoFZF
+test_execute	test/test_go.rb	/^  def test_execute$/;"	f	class:TestBase.TestGoFZF
+test_execute_multi	test/test_go.rb	/^  def test_execute_multi$/;"	f	class:TestBase.TestGoFZF
+test_execute_plus_flag	test/test_go.rb	/^  def test_execute_plus_flag$/;"	f	class:TestBase.TestGoFZF
+test_execute_shell	test/test_go.rb	/^  def test_execute_shell$/;"	f	class:TestBase.TestGoFZF
+test_exit_0	test/test_go.rb	/^  def test_exit_0$/;"	f	class:TestBase.TestGoFZF
+test_exit_0_exit_code	test/test_go.rb	/^  def test_exit_0_exit_code$/;"	f	class:TestBase.TestGoFZF
+test_exitstatus_empty	test/test_go.rb	/^  def test_exitstatus_empty$/;"	f	class:TestBase.TestGoFZF
+test_expect	test/test_go.rb	/^  def test_expect$/;"	f	class:TestBase.TestGoFZF
+test_expect_print_query	test/test_go.rb	/^  def test_expect_print_query$/;"	f	class:TestBase.TestGoFZF
+test_expect_print_query_select_1	test/test_go.rb	/^  def test_expect_print_query_select_1$/;"	f	class:TestBase.TestGoFZF
+test_expect_printable_character_print_query	test/test_go.rb	/^  def test_expect_printable_character_print_query$/;"	f	class:TestBase.TestGoFZF
+test_file_completion	test/test_go.rb	/^  def test_file_completion$/;"	f	class:CompletionTest
+test_file_completion_root	test/test_go.rb	/^  def test_file_completion_root$/;"	f	class:CompletionTest
+test_file_completion_unicode	test/test_go.rb	/^  def test_file_completion_unicode$/;"	f	class:CompletionTest
+test_file_word	test/test_go.rb	/^  def test_file_word$/;"	f	class:TestBase.TestGoFZF
+test_filter_exitstatus	test/test_go.rb	/^  def test_filter_exitstatus$/;"	f	class:TestBase.TestGoFZF
+test_fzf_default_command	test/test_go.rb	/^  def test_fzf_default_command$/;"	f	class:TestBase.TestGoFZF
+test_fzf_default_command_failure	test/test_go.rb	/^  def test_fzf_default_command_failure$/;"	f	class:TestBase.TestGoFZF
+test_header	test/test_go.rb	/^  def test_header$/;"	f	class:TestBase.TestGoFZF
+test_header_and_header_lines	test/test_go.rb	/^  def test_header_and_header_lines$/;"	f	class:TestBase.TestGoFZF
+test_header_and_header_lines_reverse	test/test_go.rb	/^  def test_header_and_header_lines_reverse$/;"	f	class:TestBase.TestGoFZF
+test_header_and_header_lines_reverse_list	test/test_go.rb	/^  def test_header_and_header_lines_reverse_list$/;"	f	class:TestBase.TestGoFZF
+test_header_lines	test/test_go.rb	/^  def test_header_lines$/;"	f	class:TestBase.TestGoFZF
+test_header_lines_overflow	test/test_go.rb	/^  def test_header_lines_overflow$/;"	f	class:TestBase.TestGoFZF
+test_header_lines_reverse	test/test_go.rb	/^  def test_header_lines_reverse$/;"	f	class:TestBase.TestGoFZF
+test_header_lines_reverse_list	test/test_go.rb	/^  def test_header_lines_reverse_list$/;"	f	class:TestBase.TestGoFZF
+test_header_lines_with_nth	test/test_go.rb	/^  def test_header_lines_with_nth$/;"	f	class:TestBase.TestGoFZF
+test_header_reverse	test/test_go.rb	/^  def test_header_reverse$/;"	f	class:TestBase.TestGoFZF
+test_header_reverse_list	test/test_go.rb	/^  def test_header_reverse_list$/;"	f	class:TestBase.TestGoFZF
+test_history	test/test_go.rb	/^  def test_history$/;"	f	class:TestBase.TestGoFZF
+test_hscroll_off	test/test_go.rb	/^  def test_hscroll_off$/;"	f	class:TestBase.TestGoFZF
+test_info_hidden	test/test_go.rb	/^  def test_info_hidden$/;"	f	class:TestBase.TestGoFZF
+test_invalid_cache	test/test_go.rb	/^  def test_invalid_cache$/;"	f	class:TestBase.TestGoFZF
+test_invalid_cache_query_type	test/test_go.rb	/^  def test_invalid_cache_query_type$/;"	f	class:TestBase.TestGoFZF
+test_invalid_option	test/test_go.rb	/^  def test_invalid_option$/;"	f	class:TestBase.TestGoFZF
+test_inverse_only_search_should_not_sort_the_result	test/test_go.rb	/^  def test_inverse_only_search_should_not_sort_the_result$/;"	f	class:TestBase.TestGoFZF
+test_jump	test/test_go.rb	/^  def test_jump$/;"	f	class:TestBase.TestGoFZF
+test_jump_accept	test/test_go.rb	/^  def test_jump_accept$/;"	f	class:TestBase.TestGoFZF
+test_keep_right	test/test_go.rb	/^  def test_keep_right$/;"	f	class:TestBase.TestGoFZF
+test_key_bindings	test/test_go.rb	/^  def test_key_bindings$/;"	f	class:TestBase.TestGoFZF
+test_long_line	test/test_go.rb	/^  def test_long_line$/;"	f	class:TestBase.TestGoFZF
+test_margin	test/test_go.rb	/^  def test_margin$/;"	f	class:TestBase.TestGoFZF
+test_margin_reverse	test/test_go.rb	/^  def test_margin_reverse$/;"	f	class:TestBase.TestGoFZF
+test_margin_reverse_list	test/test_go.rb	/^  def test_margin_reverse_list$/;"	f	class:TestBase.TestGoFZF
+test_marker	test/test_go.rb	/^  def test_marker$/;"	f	class:TestBase.TestGoFZF
+test_multi_max	test/test_go.rb	/^  def test_multi_max$/;"	f	class:TestBase.TestGoFZF
+test_multi_order	test/test_go.rb	/^  def test_multi_order$/;"	f	class:TestBase.TestGoFZF
+test_no_clear	test/test_go.rb	/^  def test_no_clear$/;"	f	class:TestBase.TestGoFZF
+test_normalized_match	test/test_go.rb	/^  def test_normalized_match$/;"	f	class:TestBase.TestGoFZF
+test_or_operator	test/test_go.rb	/^  def test_or_operator$/;"	f	class:TestBase.TestGoFZF
+test_partial_caching	test/test_go.rb	/^  def test_partial_caching$/;"	f	class:TestBase.TestGoFZF
+test_phony	test/test_go.rb	/^  def test_phony$/;"	f	class:TestBase.TestGoFZF
+test_pointer	test/test_go.rb	/^  def test_pointer$/;"	f	class:TestBase.TestGoFZF
+test_pointer_with_jump	test/test_go.rb	/^  def test_pointer_with_jump$/;"	f	class:TestBase.TestGoFZF
+test_preview	test/test_go.rb	/^  def test_preview$/;"	f	class:TestBase.TestGoFZF
+test_preview_bindings_with_default_preview	test/test_go.rb	/^  def test_preview_bindings_with_default_preview$/;"	f	class:TestBase.TestGoFZF
+test_preview_bindings_without_default_preview	test/test_go.rb	/^  def test_preview_bindings_without_default_preview$/;"	f	class:TestBase.TestGoFZF
+test_preview_correct_tab_width_after_ansi_reset_code	test/test_go.rb	/^  def test_preview_correct_tab_width_after_ansi_reset_code$/;"	f	class:TestBase.TestGoFZF
+test_preview_file	test/test_go.rb	/^  def test_preview_file$/;"	f	class:TestBase.TestGoFZF
+test_preview_flags	test/test_go.rb	/^  def test_preview_flags$/;"	f	class:TestBase.TestGoFZF
+test_preview_hidden	test/test_go.rb	/^  def test_preview_hidden$/;"	f	class:TestBase.TestGoFZF
+test_preview_q_no_match	test/test_go.rb	/^  def test_preview_q_no_match$/;"	f	class:TestBase.TestGoFZF
+test_preview_q_no_match_with_initial_query	test/test_go.rb	/^  def test_preview_q_no_match_with_initial_query$/;"	f	class:TestBase.TestGoFZF
+test_preview_scroll_begin_and_offset	test/test_go.rb	/^  def test_preview_scroll_begin_and_offset$/;"	f	class:TestBase.TestGoFZF
+test_preview_scroll_begin_constant	test/test_go.rb	/^  def test_preview_scroll_begin_constant$/;"	f	class:TestBase.TestGoFZF
+test_preview_scroll_begin_expr	test/test_go.rb	/^  def test_preview_scroll_begin_expr$/;"	f	class:TestBase.TestGoFZF
+test_preview_size_0	test/test_go.rb	/^  def test_preview_size_0$/;"	f	class:TestBase.TestGoFZF
+test_preview_update_on_select	test/test_go.rb	/^  def test_preview_update_on_select$/;"	f	class:TestBase.TestGoFZF
+test_process_completion	test/test_go.rb	/^  def test_process_completion$/;"	f	class:CompletionTest
+test_query_unicode	test/test_go.rb	/^  def test_query_unicode$/;"	f	class:TestBase.TestGoFZF
+test_read0	test/test_go.rb	/^  def test_read0$/;"	f	class:TestBase.TestGoFZF
+test_reload	test/test_go.rb	/^  def test_reload$/;"	f	class:TestBase.TestGoFZF
+test_reload_even_when_theres_no_match	test/test_go.rb	/^  def test_reload_even_when_theres_no_match$/;"	f	class:TestBase.TestGoFZF
+test_scroll	test/test_go.rb	/^  def test_scroll$/;"	f	class:TestBase.TestGoFZF
+test_select_1	test/test_go.rb	/^  def test_select_1$/;"	f	class:TestBase.TestGoFZF
+test_select_1_exit_0_fail	test/test_go.rb	/^  def test_select_1_exit_0_fail$/;"	f	class:TestBase.TestGoFZF
+test_select_all_deselect_all_toggle_all	test/test_go.rb	/^  def test_select_all_deselect_all_toggle_all$/;"	f	class:TestBase.TestGoFZF
+test_smart_case_for_each_term	test/test_go.rb	/^  def test_smart_case_for_each_term$/;"	f	class:TestBase.TestGoFZF
+test_strip_xterm_osc_sequence	test/test_go.rb	/^  def test_strip_xterm_osc_sequence$/;"	f	class:TestBase.TestGoFZF
+test_sync	test/test_go.rb	/^  def test_sync$/;"	f	class:TestBase.TestGoFZF
+test_tabstop	test/test_go.rb	/^  def test_tabstop$/;"	f	class:TestBase.TestGoFZF
+test_tac	test/test_go.rb	/^  def test_tac$/;"	f	class:TestBase.TestGoFZF
+test_tac_nosort	test/test_go.rb	/^  def test_tac_nosort$/;"	f	class:TestBase.TestGoFZF
+test_tac_sort	test/test_go.rb	/^  def test_tac_sort$/;"	f	class:TestBase.TestGoFZF
+test_tiebreak	test/test_go.rb	/^  def test_tiebreak$/;"	f	class:TestBase.TestGoFZF
+test_tiebreak_begin_algo_v2	test/test_go.rb	/^  def test_tiebreak_begin_algo_v2$/;"	f	class:TestBase.TestGoFZF
+test_tiebreak_end	test/test_go.rb	/^  def test_tiebreak_end$/;"	f	class:TestBase.TestGoFZF
+test_tiebreak_index_begin	test/test_go.rb	/^  def test_tiebreak_index_begin$/;"	f	class:TestBase.TestGoFZF
+test_tiebreak_length_with_nth	test/test_go.rb	/^  def test_tiebreak_length_with_nth$/;"	f	class:TestBase.TestGoFZF
+test_toggle_sort	test/test_go.rb	/^  def test_toggle_sort$/;"	f	class:TestBase.TestGoFZF
+test_unicode_case	test/test_go.rb	/^  def test_unicode_case$/;"	f	class:TestBase.TestGoFZF
+test_unset_completion	test/test_go.rb	/^  def test_unset_completion$/;"	f	class:CompletionTest
+test_vanilla	test/test_go.rb	/^  def test_vanilla$/;"	f	class:TestBase.TestGoFZF
+test_with_nth	test/test_go.rb	/^  def test_with_nth$/;"	f	class:TestBase.TestGoFZF
+test_with_nth_ansi	test/test_go.rb	/^  def test_with_nth_ansi$/;"	f	class:TestBase.TestGoFZF
+test_with_nth_basic	test/test_go.rb	/^  def test_with_nth_basic$/;"	f	class:TestBase.TestGoFZF
+test_with_nth_no_ansi	test/test_go.rb	/^  def test_with_nth_no_ansi$/;"	f	class:TestBase.TestGoFZF
+tmux_enabled	plugin/fzf.vim	/^function! s:tmux_enabled()$/;"	f
+toActions	src/terminal.go	/^func toActions(types ...actionType) []action {$/;"	f
+toAnsiString	src/ansi.go	/^func toAnsiString(color tui.Color, offset int) string {$/;"	f
+toggleItem	src/terminal.go	/^func (t *Terminal) toggleItem(item *Item) bool {$/;"	f
+transformInput	src/pattern.go	/^func (p *Pattern) transformInput(item *Item) []Token {$/;"	f
+trimLeft	src/terminal.go	/^func (t *Terminal) trimLeft(runes []rune, width int) ([]rune, int32) {$/;"	f
+trimQuery	src/terminal.go	/^func trimQuery(query string) []rune {$/;"	f
+trimRight	src/terminal.go	/^func (t *Terminal) trimRight(runes []rune, width int) ([]rune, int) {$/;"	f
+truncateQuery	src/terminal.go	/^func (t *Terminal) truncateQuery() {$/;"	f
+trySkip	src/algo/algo.go	/^func trySkip(input *util.Chars, caseSensitive bool, b byte, from int) int {$/;"	f
+try_curl	install	/^try_curl() {$/;"	f
+try_wget	install	/^try_wget() {$/;"	f
+ttyname	src/tui/ttyname_unix.go	/^func ttyname() string {$/;"	f
+ttyname	src/tui/ttyname_windows.go	/^func ttyname() string {$/;"	f
+tui	src/tui/dummy.go	/^package tui$/;"	p
+tui	src/tui/light.go	/^package tui$/;"	p
+tui	src/tui/light_unix.go	/^package tui$/;"	p
+tui	src/tui/light_windows.go	/^package tui$/;"	p
+tui	src/tui/tcell.go	/^package tui$/;"	p
+tui	src/tui/ttyname_unix.go	/^package tui$/;"	p
+tui	src/tui/ttyname_windows.go	/^package tui$/;"	p
+tui	src/tui/tui.go	/^package tui$/;"	p
+tui	src/tui/tui_test.go	/^package tui$/;"	p
+unset_var	test/test_go.rb	/^  def unset_var(name)$/;"	f	class:TestBase.TestShell
+until	test/test_go.rb	/^  def until(refresh = false)$/;"	f	class:Tmux
+updatePromptOffset	src/terminal.go	/^func (t *Terminal) updatePromptOffset() ([]rune, []rune) {$/;"	f
+updateTerminalSize	src/tui/light_unix.go	/^func (r *LightRenderer) updateTerminalSize() {$/;"	f
+updateTerminalSize	src/tui/light_windows.go	/^func (r *LightRenderer) updateTerminalSize() {$/;"	f
+usage	src/options.go	/^const usage = `usage: fzf [options]$/;"	c
+use_sh	plugin/fzf.vim	/^function! s:use_sh()$/;"	f
+util	src/util/atomicbool.go	/^package util$/;"	p
+util	src/util/atomicbool_test.go	/^package util$/;"	p
+util	src/util/chars.go	/^package util$/;"	p
+util	src/util/chars_test.go	/^package util$/;"	p
+util	src/util/eventbox.go	/^package util$/;"	p
+util	src/util/eventbox_test.go	/^package util$/;"	p
+util	src/util/slab.go	/^package util$/;"	p
+util	src/util/util.go	/^package util$/;"	p
+util	src/util/util_test.go	/^package util$/;"	p
+util	src/util/util_unix.go	/^package util$/;"	p
+util	src/util/util_windows.go	/^package util$/;"	p
+validateSign	src/options.go	/^func validateSign(sign string, signOptName string) error {$/;"	f
+validate_layout	plugin/fzf.vim	/^function! s:validate_layout(layout)$/;"	f
+version	src/constants.go	/^	version = "0.23.1"$/;"	c
+vmove	src/terminal.go	/^func (t *Terminal) vmove(o int, allowCycle bool) {$/;"	f
+vset	src/terminal.go	/^func (t *Terminal) vset(o int) bool {$/;"	f
+wait	test/test_go.rb	/^def wait$/;"	f
+warn	plugin/fzf.vim	/^function! s:warn(msg)$/;"	f
+windowPosition	src/options.go	/^type windowPosition int$/;"	t
+withIndex	src/result_test.go	/^func withIndex(i *Item, index int) *Item {$/;"	f
+withPrefixLengths	src/tokenizer.go	/^func withPrefixLengths(tokens []string, begin int) []Token {$/;"	f
+wrapLine	src/tui/light.go	/^func wrapLine(input string, prefixLength int, max int, tabstop int) []wrappedLine {$/;"	f
+wrap_cmds	plugin/fzf.vim	/^  function! s:wrap_cmds(cmds)$/;"	f
+wrappedLine	src/tui/light.go	/^type wrappedLine struct {$/;"	t
+writeTemporaryFile	src/terminal.go	/^func writeTemporaryFile(data []string, printSep string) string {$/;"	f
+writelines	test/test_go.rb	/^  def writelines(path, lines)$/;"	f	class:TestBase
+xterm_launcher	plugin/fzf.vim	/^function! s:xterm_launcher()$/;"	f
+zsh	test/test_go.rb	/^    def zsh$/;"	f	class:Shell
